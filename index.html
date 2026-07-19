@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>مهرجان الكرازة - ليأتِ ملكوتك</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* ── Candy / game-console palette ── */
+  --pink: #ff3d8e;
+  --pink-deep: #d81b6b;
+  --yellow: #ffd400;
+  --green: #00d9a3;
+  --blue: #2fc6ff;
+  --orange: #ff8a3d;
+  --violet: #7b3fe4;
+
+  --bg1: #3a0d73;
+  --bg2: #6c1fb0;
+  --bg3: #a11f8f;
+
+  --ink: #1f1235;
+  --ink-soft: rgba(31,18,53,0.62);
+  --paper: #ffffff;
+  --paper-tint: #f6f0ff;
+
+  --radius: 26px;
+  --radius-sm: 16px;
+  --border-w: 3px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: linear-gradient(150deg, var(--bg1) 0%, var(--bg2) 55%, var(--bg3) 100%);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Animated blobs ─── */
+.bg-orbs { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.55; animation: drift 18s ease-in-out infinite alternate; mix-blend-mode: screen; }
+.orb-1 { width: 560px; height: 560px; background: var(--pink); top: -220px; right: -160px; animation-duration: 20s; }
+.orb-2 { width: 460px; height: 460px; background: var(--blue); bottom: -180px; left: -120px; animation-duration: 25s; animation-delay: -8s; }
+.orb-3 { width: 380px; height: 380px; background: var(--yellow); top: 42%; left: 32%; opacity: 0.28; animation-duration: 22s; animation-delay: -4s; }
+.orb-4 { width: 340px; height: 340px; background: var(--green); top: 62%; right: 8%; opacity: 0.32; animation-duration: 16s; animation-delay: -12s; }
+
+@keyframes drift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, 60px) scale(1.18); }
+}
+
+/* ─── Confetti particles ─── */
+.particles { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+.dot { position: absolute; opacity: 0; animation: floatUp linear infinite; }
+.dot.sq { border-radius: 4px; }
+.dot.ci { border-radius: 50%; }
+@keyframes floatUp {
+  0% { opacity: 0; transform: translateY(0) rotate(0deg) scale(0.6); }
+  10% { opacity: 0.85; }
+  90% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-100vh) rotate(360deg) scale(1.15); }
+}
+
+/* ─── Layout ─── */
+.page { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* ─── Top ribbon ─── */
+.header-strip {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 11px 20px;
+  background: repeating-linear-gradient(90deg, var(--yellow) 0 26px, var(--pink) 26px 52px);
+  border-bottom: var(--border-w) solid var(--ink);
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: .02em;
+}
+.header-strip span.chip {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 99px;
+  padding: 3px 14px;
+}
+
+/* ─── Main layout grid ─── */
+.main-grid {
+  flex: 1; display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  gap: 22px;
+  max-width: 1280px; margin: 0 auto; width: 100%;
+  padding: 30px 22px 110px;
+  align-items: start;
+}
+
+/* ─── Center hero ─── */
+.hero { display: flex; flex-direction: column; align-items: center; gap: 0; }
+
+/* Logo ring */
+.logo-ring { position: relative; width: 102px; height: 102px; margin-bottom: 18px; }
+.logo-ring img { width: 102px; height: 102px; border-radius: 50%; object-fit: cover; position: relative; z-index: 2; border: var(--border-w) solid var(--ink); }
+.logo-ring::before {
+  content: ''; position: absolute; inset: -7px; border-radius: 50%;
+  background: conic-gradient(var(--pink), var(--yellow), var(--green), var(--blue), var(--pink));
+  animation: spin 5s linear infinite; z-index: 1;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Festival badge — sticker */
+.festival-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--yellow);
+  border: var(--border-w) solid var(--ink);
+  border-radius: 99px;
+  padding: 8px 24px;
+  font-size: 13px;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: .02em;
+  margin-bottom: 18px;
+  box-shadow: 4px 4px 0 var(--ink);
+  animation: wiggle 3.2s ease-in-out infinite;
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+/* Big headline */
+.hero-title {
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 800;
+  font-size: clamp(26px, 5vw, 42px);
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--paper);
+  text-shadow: 3px 3px 0 var(--ink), -1px -1px 0 var(--ink);
+}
+.hero-title .hi { color: var(--yellow); }
+
+.hero-church {
+  font-size: 12px; font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  text-align: center; letter-spacing: .02em;
+  margin-bottom: 8px;
+}
+
+.hero-sub {
+  font-size: 14px; color: rgba(255,255,255,0.9);
+  text-align: center; line-height: 1.9; margin-bottom: 26px;
+}
+.hero-sub strong {
+  color: var(--yellow); font-weight: 800;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+
+/* ─── Search card (the signature sticker panel) ─── */
+.search-card {
+  width: 100%;
+  background: var(--paper);
+  border: var(--border-w) solid var(--ink);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  position: relative;
+  box-shadow: 8px 8px 0 var(--ink);
+  transition: transform .15s, box-shadow .15s;
+}
+.search-card::before {
+  content: '🔑';
+  position: absolute;
+  top: -22px; right: 22px;
+  width: 46px; height: 46px;
+  background: var(--pink);
+  border: var(--border-w) solid var(--ink);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: rotate(-8deg);
+}
+
+.search-label {
+  font-size: 14px; font-weight: 700;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  color: var(--ink);
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+
+.input-wrap { position: relative; margin-bottom: 14px; }
+
+input[type="text"] {
+  width: 100%;
+  padding: 17px 48px 17px 18px;
+  background: var(--paper-tint);
+  border: var(--border-w) solid var(--ink);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: 'Cairo', sans-serif;
+  font-size: 19px; font-weight: 800;
+  text-align: center; letter-spacing: .1em;
+  outline: none;
+  transition: all .2s;
+}
+input[type="text"]::placeholder {
+  color: rgba(31,18,53,0.35); font-weight: 500; letter-spacing: 0; font-size: 15px;
+}
+input[type="text"]:focus {
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(123,63,228,0.25);
+}
+.input-icon { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); font-size: 20px; opacity: .55; pointer-events: none; }
+
+/* ─── Search button ─── */
+.btn-search {
+  width: 100%;
+  padding: 17px;
+  background: var(--green);
+  border: var(--border-w) solid var(--ink);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  letter-spacing: .02em;
+  box-shadow: 5px 5px 0 var(--ink);
+  transition: transform .12s, box-shadow .12s;
+}
+.btn-search:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--ink); }
+.btn-search:active { transform: translate(2px,2px); box-shadow: 2px 2px 0 var(--ink); }
+
+/* ─── Result area ─── */
+#result { margin-top: 20px; width: 100%; }
+
+.msg {
+  text-align: center; padding: 16px;
+  color: rgba(255,255,255,0.85);
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  animation: fadein .3s ease;
+}
+.msg.error { color: var(--yellow); }
+
+/* ─── Student ID / University-badge style card ─── */
+@keyframes cardPop {
+  0% { opacity: 0; transform: translateY(20px) scale(.9) rotate(-2deg); }
+  60% { transform: translateY(-4px) scale(1.02) rotate(1deg); }
+  100% { opacity: 1; transform: none; }
+}
+
+.id-card {
+  position: relative;
+  width: 100%; max-width: 560px; margin: 0 auto;
+  background: var(--paper);
+  border: var(--border-w) solid var(--ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+  animation: cardPop .5s cubic-bezier(.2,.8,.2,1) both;
+  text-align: center;
+}
+
+.id-card-band {
+  position: relative;
+  background: repeating-linear-gradient(90deg, var(--yellow) 0 22px, var(--pink) 22px 44px);
+  border-bottom: var(--border-w) solid var(--ink);
+  padding: 10px 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.id-card-org { display: flex; align-items: center; gap: 8px; text-align: right; }
+.id-card-cross {
+  width: 30px; height: 30px; flex-shrink: 0;
+  border-radius: 50%; border: 2px solid var(--ink);
+  background: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px;
+}
+.id-card-org-name { font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 800; font-size: 11.5px; color: var(--ink); line-height: 1.35; }
+.id-card-org-sub { font-size: 10px; font-weight: 700; color: var(--ink-soft); }
+.id-card-badge-tag {
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: 10px; font-weight: 800;
+  background: var(--paper); border: 2px solid var(--ink); border-radius: 99px;
+  padding: 4px 10px; white-space: nowrap; flex-shrink: 0;
+}
+
+.id-card-body {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: 14px; padding: 16px 18px;
+  text-align: right;
+}
+
+.id-card-photo-wrap { flex-shrink: 0; }
+.id-card-photo {
+  width: 62px; height: 62px;
+  border-radius: 50%; border: var(--border-w) solid var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px; background: var(--paper);
+}
+
+.id-card-info { flex-shrink: 0; }
+.id-card-name {
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 800; font-size: 17px;
+  color: var(--ink);
+}
+.id-card-code { font-size: 11.5px; color: var(--ink-soft); font-weight: 700; letter-spacing: .03em; margin-top: 3px; }
+.id-card-code span { color: var(--pink-deep); font-weight: 800; }
+
+.id-card-fields {
+  display: flex; flex: 1 1 220px; min-width: 200px;
+  gap: 8px;
+}
+.id-field {
+  flex: 1;
+  background: var(--paper-tint); border: 2px solid var(--ink);
+  border-radius: var(--radius-sm); padding: 8px 4px;
+}
+.id-field-icon { display: block; font-size: 14px; margin-bottom: 2px; }
+.id-field-label { display: block; font-size: 9.5px; color: var(--ink-soft); font-weight: 700; margin-bottom: 2px; }
+.id-field-value { display: block; font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 13px; color: var(--ink); }
+
+.id-card-score {
+  flex-shrink: 0;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, var(--pink) 0%, var(--violet) 100%);
+  border: var(--border-w) solid var(--ink); border-radius: var(--radius-sm);
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.id-card-score-label { font-size: 10px; font-weight: 800; color: #fff; letter-spacing: .03em; white-space: nowrap; }
+.id-card-score-value { font-family: 'Cairo', sans-serif; font-weight: 900; font-size: 24px; color: #fff; -webkit-text-stroke: 1px var(--ink); line-height: 1; }
+
+.id-card-footer { padding: 0 16px 16px; border-top: 2px dashed rgba(31,18,53,0.35); }
+.id-card-barcode { display: flex; align-items: flex-end; justify-content: center; gap: 2px; height: 22px; margin-top: 10px; }
+.id-card-barcode span { display: block; width: 3px; background: var(--ink); }
+.id-card-barcode span:nth-child(odd) { height: 100%; }
+.id-card-barcode span:nth-child(even) { height: 58%; }
+.id-card-barcode span:nth-child(3n) { height: 80%; }
+
+/* ─── Side panels ─── */
+.side-panel { display: flex; flex-direction: column; gap: 16px; }
+
+/* ─── Collapsible section ─── */
+.collapsible {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: var(--border-w) solid var(--ink);
+  background: var(--paper);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.collapsible-btn {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 15px 18px;
+  background: var(--blue);
+  border: none; border-bottom: var(--border-w) solid transparent;
+  color: var(--ink);
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 700; font-size: 15px;
+  cursor: pointer;
+  transition: filter .2s;
+  text-align: right;
+}
+.collapsible-btn:hover { filter: brightness(1.06); }
+.collapsible-btn.is-open { border-bottom-color: var(--ink); }
+.collapsible-btn .btn-label { display: flex; align-items: center; gap: 8px; }
+.collapsible-btn .arrow {
+  font-size: 14px; color: var(--ink); font-weight: 900;
+  transition: transform .3s; display: inline-block;
+}
+.collapsible-btn.is-open .arrow { transform: rotate(180deg); }
+
+.collapsible-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height .38s cubic-bezier(.2,.8,.2,1);
+  background: var(--paper-tint);
+}
+.collapsible-body.is-open { max-height: 600px; }
+.collapsible-inner { padding: 12px 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+
+/* ─── Leaderboard row ─── */
+.lb-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  transition: transform .15s;
+  animation: fadein .3s ease both;
+}
+.lb-row:hover { transform: translateX(-3px); }
+
+.lb-num {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cairo', sans-serif; font-weight: 900; font-size: 12px;
+  color: var(--paper);
+  background: var(--violet);
+  border: 2px solid var(--ink);
+}
+.lb-row.p1 .lb-num { background: var(--yellow); color: var(--ink); }
+.lb-row.p2 .lb-num { background: #d7d7e0; color: var(--ink); }
+.lb-row.p3 .lb-num { background: var(--orange); color: var(--ink); }
+
+.lb-name {
+  flex: 1; font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 600; font-size: 13px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink);
+}
+.lb-score { font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 14px; color: var(--pink-deep); flex-shrink: 0; }
+
+/* ─── Tasks ─── */
+.tasks-box {
+  background: var(--paper);
+  border: var(--border-w) solid var(--ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.tasks-head {
+  padding: 14px 18px;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 700; font-size: 15px; letter-spacing: .02em;
+  border-bottom: var(--border-w) solid var(--ink);
+  display: flex; align-items: center; gap: 8px;
+  background: var(--green);
+  color: var(--ink);
+}
+.tasks-list { padding: 12px 12px 14px; display: flex; flex-direction: column; gap: 9px; background: var(--paper-tint); }
+
+.task-item {
+  display: block;
+  padding: 13px 16px;
+  border-radius: var(--radius-sm);
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 600; font-size: 14px;
+  text-decoration: none;
+  border: 2px solid var(--ink);
+  transition: all .15s;
+  animation: fadein .3s ease both;
+}
+.task-item.no-link { color: var(--ink-soft); background: #eee7fb; cursor: default; }
+a.task-item { color: var(--ink); background: var(--yellow); }
+a.task-item:hover { transform: translate(-2px,-2px); box-shadow: 3px 3px 0 var(--ink); }
+
+/* ─── Images ─── */
+.side-img {
+  border-radius: var(--radius);
+  width: 100%; display: block;
+  border: var(--border-w) solid var(--ink);
+  object-fit: cover;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+/* ─── Footer ─── */
+footer {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+  text-align: center; padding: 16px 20px 6px;
+  font-size: 12px; font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  background: linear-gradient(to top, rgba(58,13,115,0.98) 70%, transparent);
+  pointer-events: none;
+}
+
+/* ─── Utility ─── */
+@keyframes fadein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ─── MOBILE ─── */
+@media (max-width: 900px) {
+  .main-grid { grid-template-columns: 1fr; padding: 16px 14px 96px; gap: 16px; }
+  .col-right { order: 2; }
+  .col-center { order: 1; }
+  .col-left { order: 3; }
+  .hero-title { font-size: clamp(22px, 7vw, 32px); }
+  .id-card-score-value { font-size: 22px; }
+  .id-card-body { justify-content: center; }
+  .id-card-fields { flex: 1 1 100%; order: 3; }
+  .id-card-score { flex: 1 1 100%; flex-direction: row; justify-content: space-between; order: 4; }
+}
+
+@media (max-width: 480px) {
+  .header-strip { font-size: 11px; padding: 9px 12px; }
+  .logo-ring { width: 82px; height: 82px; }
+  .logo-ring img { width: 82px; height: 82px; }
+}
+
+/* loading spinner */
+.spinner {
+  width: 32px; height: 32px;
+  border: 4px solid var(--paper-tint);
+  border-top-color: var(--pink);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  margin: 20px auto;
+}
+
+/* ═══════════════════════════════════════
+   LOGIN GATE
+   ═══════════════════════════════════════ */
+.is-hidden { display: none !important; }
+
+.login-screen {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 40px 20px 120px;
+  position: relative; z-index: 1;
+  transition: opacity .4s ease, transform .4s ease;
+}
+.login-screen.leaving { opacity: 0; transform: scale(.95) translateY(-14px); pointer-events: none; }
+.login-wrap { width: 100%; max-width: 420px; display: flex; flex-direction: column; align-items: center; }
+
+#appContent { animation: fadein .5s ease both; }
+
+/* ─── Header icon buttons (notifications / logout) ─── */
+.header-strip { position: relative; }
+.header-icon-btn {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 2px solid var(--ink); background: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; line-height: 1; cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink);
+  transition: transform .15s, box-shadow .15s;
+  position: absolute; top: 50%; transform: translateY(-50%);
+}
+.header-icon-btn:hover { transform: translateY(-50%) translate(-1px,-1px); box-shadow: 3px 3px 0 var(--ink); }
+.header-icon-btn:active { transform: translateY(-50%) translate(1px,1px); box-shadow: 1px 1px 0 var(--ink); }
+
+.logout-btn { right: 14px; }
+.notif-wrap { left: 14px; position: absolute; top: 50%; transform: translateY(-50%); }
+.notif-wrap .header-icon-btn { position: static; transform: none; }
+.notif-wrap .header-icon-btn:hover { transform: translate(-1px,-1px); }
+.notif-wrap .header-icon-btn:active { transform: translate(1px,1px); }
+
+.notif-dot {
+  position: absolute; top: -3px; left: -3px;
+  width: 13px; height: 13px; border-radius: 50%;
+  background: #ff2d55; border: 2px solid var(--paper);
+  display: none;
+}
+
+.notif-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(31,18,53,0.4);
+  opacity: 0; visibility: hidden;
+  transition: opacity .25s ease;
+  z-index: 9998;
+}
+.notif-backdrop.open { opacity: 1; visibility: visible; }
+
+.notif-panel {
+  position: fixed; top: 64px; left: 14px;
+  width: 300px; max-width: 86vw;
+  max-height: 0; overflow: hidden;
+  background: var(--paper); border: var(--border-w) solid var(--ink);
+  border-radius: var(--radius-sm);
+  box-shadow: 8px 8px 0 var(--ink);
+  transition: max-height .3s ease, opacity .3s ease, transform .3s ease;
+  opacity: 0; transform: translateY(-10px);
+  z-index: 9999;
+}
+.notif-panel.open { max-height: 70vh; opacity: 1; overflow-y: auto; transform: translateY(0); }
+.notif-panel-head {
+  padding: 12px 14px;
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 700; font-size: 14px;
+  border-bottom: 2px solid var(--ink); background: var(--yellow); color: var(--ink);
+}
+.notif-panel-list { padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+.notif-item {
+  padding: 10px 12px; border-radius: 12px;
+  background: var(--paper-tint); border: 2px solid var(--ink);
+  font-size: 13px; font-weight: 600; line-height: 1.7; color: var(--ink);
+}
+.notif-item.unread { border-color: var(--pink); background: #fff0f7; }
+
+/* ─── Persistent "logged in" status bar (top of page) ─── */
+.login-status-bar {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--green); border-bottom: var(--border-w) solid var(--ink);
+  color: var(--ink); font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 800; font-size: 13px; padding: 9px 16px;
+  animation: slideDownBar .4s cubic-bezier(.2,.8,.2,1) both;
+  position: relative; z-index: 5;
+}
+@keyframes slideDownBar {
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .header-icon-btn { width: 32px; height: 32px; font-size: 14px; }
+  .logout-btn { right: 8px; }
+  .notif-wrap { left: 8px; }
+  .notif-panel { top: 56px; left: 8px; width: calc(100vw - 16px); }
+}
+</style>
+</head>
+<body>
+
+<!-- BG -->
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+</div>
+<div class="particles" id="particles" aria-hidden="true"></div>
+
+<div class="page">
+
+  <div class="header-strip">
+    <button class="header-icon-btn logout-btn is-hidden" id="logoutBtn" onclick="logoutUser()" title="تسجيل خروج" aria-label="تسجيل خروج">🚪</button>
+    <span class="chip">✝ مهرجان الكرازة 2026 ✝</span>
+    <div class="notif-wrap is-hidden" id="notifWrap">
+      <button class="header-icon-btn notif-btn" id="notifBtn" onclick="toggleNotifications()" title="التنبيهات" aria-label="التنبيهات">
+        🔔<span class="notif-dot" id="notifDot"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="login-status-bar is-hidden" id="loginStatusBar">✅ تم تسجيل الدخول بنجاح</div>
+
+  <!-- ══ LOGIN SCREEN ══ -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-wrap">
+      <div class="logo-ring">
+        <img src="logo.jpg" alt="شعار الخدمة" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22102%22 height=%22102%22%3E%3Ccircle cx=%2251%22 cy=%2251%22 r=%2251%22 fill=%22%23f6f0ff%22/%3E%3Ctext x=%2251%22 y=%2260%22 text-anchor=%22middle%22 fill=%22%23ff3d8e%22 font-size=%2232%22%3E✝%3C/text%3E%3C/svg%3E'">
+      </div>
+      <div class="festival-badge">مهرجان ليأتِ ملكوتك</div>
+      <h1 class="hero-title">اعرف سكورك <span class="hi">وترتيبك</span><br>بين سكان الملكوت</h1>
+      <p class="hero-church">خدمة فتيان اعدادي — كنيسة الشهيد العظيم مارمينا — مطرانية الأقباط الأرثوذكس بالفيوم</p>
+      <p class="hero-sub">أدخل الكود الخاص بك للدخول<br><strong>مهرجان الكرازة 2026</strong></p>
+
+      <div class="search-card">
+        <div class="search-label"><span class="icon"></span> الكود الخاص بك</div>
+        <div class="input-wrap">
+          <span class="input-icon">#</span>
+          <input type="text" id="loginCodeInput" placeholder="اكتب الكود هنا" inputmode="numeric" autocomplete="off" onkeydown="if(event.key==='Enter') loginStudent()">
+        </div>
+        <button class="btn-search" onclick="loginStudent()">🔓 دخول</button>
+        <div id="loginResult"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-grid is-hidden" id="appContent">
+
+    <!-- ── RIGHT: Leaderboard + Tasks ── -->
+    <div class="side-panel col-right">
+
+      <div class="collapsible">
+        <button class="collapsible-btn" onclick="toggleSection(this,'topPanel')" aria-expanded="false">
+          <span class="btn-label">🏆 <span>TOP 10</span></span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="collapsible-body" id="topPanel">
+          <div class="collapsible-inner" id="topTenList">
+            <div class="spinner"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <button class="collapsible-btn" onclick="toggleSection(this,'groupsPanel')" aria-expanded="false">
+          <span class="btn-label">🏅 <span>ترتيب المجموعات</span></span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="collapsible-body" id="groupsPanel">
+          <div class="collapsible-inner" id="groupsList">
+            <div class="spinner"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tasks-box">
+        <div class="tasks-head">⚡ Tasks</div>
+        <div class="tasks-list" id="tasksList">
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── CENTER: Hero + Search ── -->
+    <div class="hero col-center">
+
+      <div class="logo-ring">
+        <img src="logo.jpg" alt="شعار الخدمة" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22102%22 height=%22102%22%3E%3Ccircle cx=%2251%22 cy=%2251%22 r=%2251%22 fill=%22%23f6f0ff%22/%3E%3Ctext x=%2251%22 y=%2260%22 text-anchor=%22middle%22 fill=%22%23ff3d8e%22 font-size=%2232%22%3E✝%3C/text%3E%3C/svg%3E'">
+      </div>
+
+      <div class="festival-badge">مهرجان ليأتِ ملكوتك</div>
+
+      <h1 class="hero-title" id="welcomeTitle">أهلاً بيك 👋</h1>
+      <p class="hero-church">خدمة فتيان اعدادي — كنيسة الشهيد العظيم مارمينا — مطرانية الأقباط الأرثوذكس بالفيوم</p>
+      <p class="hero-sub">دي بياناتك في<br><strong>مهرجان الكرازة 2026</strong></p>
+
+      <div id="dashboardResult"></div>
+
+    </div>
+
+    <!-- ── LEFT: Images ── -->
+    <div class="side-panel col-left">
+      <img class="side-img" src="side-image.jpg" alt="صورة المهرجان"
+        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22560%22%3E%3Crect width=%22400%22 height=%22560%22 rx=%2220%22 fill=%22%23f6f0ff%22 stroke=%22%231f1235%22 stroke-width=%223%22 stroke-dasharray=%228 6%22/%3E%3Ctext x=%22200%22 y=%22280%22 text-anchor=%22middle%22 fill=%22%237b3fe4%22 font-family=%22Tajawal%22 font-size=%2218%22%3Eصورة المهرجان%3C/text%3E%3C/svg%3E'">
+      <img class="side-img" src="extra-photo.jpg" alt="صورة إضافية"
+        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect width=%22400%22 height=%22300%22 rx=%2220%22 fill=%22%23f6f0ff%22 stroke=%22%231f1235%22 stroke-width=%223%22 stroke-dasharray=%228 6%22/%3E%3Ctext x=%22200%22 y=%22150%22 text-anchor=%22middle%22 fill=%22%23ff3d8e%22 font-family=%22Tajawal%22 font-size=%2218%22%3Eصورة إضافية%3C/text%3E%3C/svg%3E'">
+    </div>
+
+  </div>
+
+</div>
+
+<footer>✝ خدمة فتيان اعدادي — 2026 ✝</footer>
+
+<!-- موضوعة هنا كأبناء مباشرين لل body عشان تظهر دايمًا فوق كل حاجة -->
+<div class="notif-backdrop" id="notifBackdrop" onclick="closeNotifications()"></div>
+<div class="notif-panel" id="notifPanel">
+  <div class="notif-panel-head">🔔 أهم التنبيهات</div>
+  <div class="notif-panel-list" id="notifList"></div>
+</div>
+
+<script>
+/* ── Confetti particles ── */
+const pLayer = document.getElementById('particles');
+const colors = ['#ff3d8e','#ffd400','#00d9a3','#2fc6ff','#ff8a3d','#7b3fe4'];
+for(let i = 0; i < 40; i++){
+  const d = document.createElement('div');
+  d.className = 'dot ' + (Math.random() > 0.5 ? 'sq' : 'ci');
+  const sz = Math.random() * 6 + 4;
+  d.style.cssText = `
+    width:${sz}px; height:${sz}px;
+    left:${Math.random()*100}%;
+    top:${Math.random()*100}%;
+    background:${colors[Math.floor(Math.random()*colors.length)]};
+    animation-duration:${Math.random()*18+10}s;
+    animation-delay:${Math.random()*12}s;
+  `;
+  pLayer.appendChild(d);
+}
+
+/* ── Toggle collapsible ── */
+function toggleSection(btn, panelId){
+  const body = document.getElementById(panelId);
+  const isOpen = body.classList.toggle('is-open');
+  btn.classList.toggle('is-open', isOpen);
+  btn.setAttribute('aria-expanded', isOpen);
+}
+
+/* ── CSV helpers ── */
+function parseCsvRow(row){
+  const cells = []; let cur = '', inQ = false;
+  for(let i = 0; i < row.length; i++){
+    const ch = row[i];
+    if(ch === '"'){ if(inQ && row[i+1]==='"'){ cur+='"'; i++; } else inQ=!inQ; }
+    else if(ch===',' && !inQ){ cells.push(cur.trim()); cur=''; }
+    else cur+=ch;
+  }
+  cells.push(cur.trim()); return cells;
+}
+function parseCsv(txt){
+  return txt.split(/\r?\n/).filter(r=>r.trim()).slice(1).map(parseCsvRow);
+}
+
+/* ── Proxy URL (Apps Script) ── */
+/* استبدل الرابط ده برابط الـ Web App بتاعك بعد الـ Deploy */
+const PROXY_URL = "https://script.google.com/macros/s/AKfycbyZNIVDBRF_wnHXYTjFnad4Zmm64k7f9l616H7UBNSnuO5dxQFkGNTdj11FmcYuV-ljQw/exec";
+const sheetURL  = PROXY_URL + "?type=top10";
+const groupsURL = PROXY_URL + "?type=groups";
+const tasksURL  = PROXY_URL + "?type=tasks";
+
+/* ── Rank visuals ── */
+function rankVis(rank){
+  const r = parseInt(rank,10);
+  if(r===1) return { icon:'🥇', bg:'#ffd400', shadow:'', glow:'rgba(255,212,0,0.28)' };
+  if(r===2) return { icon:'🥈', bg:'#d7d7e0', shadow:'', glow:'rgba(215,215,224,0.28)' };
+  if(r===3) return { icon:'🥉', bg:'#ff8a3d', shadow:'', glow:'rgba(255,138,61,0.28)' };
+  return { icon:'🎓', bg:'#2fc6ff', shadow:'', glow:'rgba(47,198,255,0.28)' };
+}
+
+/* ═══════════════════════════════════════
+   LOGIN GATE + DASHBOARD
+   ═══════════════════════════════════════ */
+const LOGIN_KEY = 'kerazaStudentCode';
+
+/* -- عرض بيانات الطالب على شكل كارنيه/بادچ جامعي -- */
+function renderDashboard(s){
+  const v = rankVis(s.rank);
+  document.getElementById('welcomeTitle').innerHTML = `أهلاً يا <span class="hi">${s.name}</span> 👋`;
+  document.getElementById('dashboardResult').innerHTML = `
+    <div class="id-card">
+      <div class="id-card-band">
+        <div class="id-card-org">
+          <span class="id-card-cross">✝</span>
+          <div>
+            <div class="id-card-org-name">خدمة فتيان اعدادي</div>
+            <div class="id-card-org-sub">مهرجان الكرازة 2026</div>
+          </div>
+        </div>
+        <div class="id-card-badge-tag">${v.icon} كارنيه الطالب</div>
+      </div>
+
+      <div class="id-card-body">
+        <div class="id-card-photo-wrap">
+          <div class="id-card-photo" style="background:${v.bg};">${v.icon}</div>
+        </div>
+
+        <div class="id-card-info">
+          <div class="id-card-name">${s.name}</div>
+          <div class="id-card-code">كود الطالب: <span>${s.code || '—'}</span></div>
+        </div>
+
+        <div class="id-card-fields">
+          <div class="id-field">
+            <span class="id-field-icon">🏫</span>
+            <span class="id-field-label">الفصل</span>
+            <span class="id-field-value">${s.class}</span>
+          </div>
+          <div class="id-field">
+            <span class="id-field-icon">👥</span>
+            <span class="id-field-label">المجموعة</span>
+            <span class="id-field-value">${s.group}</span>
+          </div>
+          <div class="id-field">
+            <span class="id-field-icon">🏆</span>
+            <span class="id-field-label">الترتيب</span>
+            <span class="id-field-value">${s.rank}</span>
+          </div>
+        </div>
+
+        <div class="id-card-score">
+          <span class="id-card-score-label">إجمالي السكور</span>
+          <span class="id-card-score-value">${s.score}</span>
+        </div>
+      </div>
+
+      <div class="id-card-footer">
+        <div class="id-card-barcode">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>`;
+}
+
+/* -- الانتقال من شاشة الدخول لصفحة الطالب -- */
+function showApp(){
+  const loginScreen = document.getElementById('loginScreen');
+  loginScreen.classList.add('leaving');
+  setTimeout(()=>{
+    loginScreen.classList.add('is-hidden');
+    loginScreen.classList.remove('leaving');
+    document.getElementById('appContent').classList.remove('is-hidden');
+  }, 380);
+  document.getElementById('logoutBtn').classList.remove('is-hidden');
+  document.getElementById('notifWrap').classList.remove('is-hidden');
+  document.getElementById('loginStatusBar').classList.remove('is-hidden');
+  renderNotifications();
+}
+
+/* -- الرجوع لشاشة الدخول -- */
+function showLogin(){
+  document.getElementById('appContent').classList.add('is-hidden');
+  const loginScreen = document.getElementById('loginScreen');
+  loginScreen.classList.remove('is-hidden');
+  document.getElementById('logoutBtn').classList.add('is-hidden');
+  document.getElementById('notifWrap').classList.add('is-hidden');
+  document.getElementById('notifPanel').classList.remove('open');
+  document.getElementById('notifBackdrop').classList.remove('open');
+  document.getElementById('loginStatusBar').classList.add('is-hidden');
+  document.getElementById('loginCodeInput').value = '';
+  document.getElementById('loginResult').innerHTML = '';
+}
+
+/* -- تسجيل الدخول بالكود -- */
+async function loginStudent(){
+  const code = document.getElementById('loginCodeInput').value.trim();
+  const res = document.getElementById('loginResult');
+  if(!code){ res.innerHTML='<div class="msg">اكتب الكود الخاص بك أولاً 👆</div>'; return; }
+  res.innerHTML = '<div class="spinner"></div>';
+  try{
+    const r = await fetch(PROXY_URL + "?type=student&code=" + encodeURIComponent(code));
+    const s = await r.json();
+    if(s.found){
+      s.code = code;
+      localStorage.setItem(LOGIN_KEY, code);
+      res.innerHTML = '';
+      renderDashboard(s);
+      showApp();
+    } else {
+      res.innerHTML = '<div class="msg error">❌ مش لاقي الكود ده، تأكد من الأرقام وحاول تاني</div>';
+    }
+  } catch(e){
+    res.innerHTML = '<div class="msg error">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+  }
+}
+
+/* -- تسجيل خروج -- */
+function logoutUser(){
+  localStorage.removeItem(LOGIN_KEY);
+  showLogin();
+}
+
+/* -- الدخول التلقائي لو الكود محفوظ عند الطالب من قبل -- */
+async function tryAutoLogin(){
+  const code = localStorage.getItem(LOGIN_KEY);
+  if(!code){ showLogin(); return; }
+  try{
+    const r = await fetch(PROXY_URL + "?type=student&code=" + encodeURIComponent(code));
+    const s = await r.json();
+    if(s.found){
+      s.code = code;
+      renderDashboard(s);
+      document.getElementById('loginScreen').classList.add('is-hidden');
+      document.getElementById('appContent').classList.remove('is-hidden');
+      document.getElementById('logoutBtn').classList.remove('is-hidden');
+      document.getElementById('notifWrap').classList.remove('is-hidden');
+      document.getElementById('loginStatusBar').classList.remove('is-hidden');
+      renderNotifications();
+    } else {
+      localStorage.removeItem(LOGIN_KEY);
+      showLogin();
+    }
+  } catch(e){
+    showLogin();
+  }
+}
+
+/* ═══════════════════════════════════════
+   NOTIFICATIONS
+   ═══════════════════════════════════════ */
+const NOTIF_KEY = 'kerazaNotifSeen';
+
+/* عدّل أو زوّد هنا التنبيهات اللي عايز تظهرها للطلاب */
+const notifications = [
+  { id: 'n1', text: 'مرحبا بيكم في مهرجان ليأتِ ملكوتك 2026 🎉' },
+  { id: 'n2', text: 'تابعوا سكوركم وترتيبكم أول بأول من هنا ⭐' },
+];
+
+function renderNotifications(){
+  const seen = JSON.parse(localStorage.getItem(NOTIF_KEY) || '[]');
+  const list = document.getElementById('notifList');
+  const dot  = document.getElementById('notifDot');
+  const hasUnread = notifications.some(n => !seen.includes(n.id));
+  dot.style.display = hasUnread ? 'block' : 'none';
+
+  if(!notifications.length){
+    list.innerHTML = '<div class="msg">لا توجد تنبيهات حالياً</div>';
+    return;
+  }
+  list.innerHTML = notifications.map(n =>
+    `<div class="notif-item ${seen.includes(n.id) ? '' : 'unread'}">${n.text}</div>`
+  ).join('');
+}
+
+function toggleNotifications(){
+  const panel = document.getElementById('notifPanel');
+  const backdrop = document.getElementById('notifBackdrop');
+  const isOpen = panel.classList.toggle('open');
+  backdrop.classList.toggle('open', isOpen);
+  if(isOpen){
+    localStorage.setItem(NOTIF_KEY, JSON.stringify(notifications.map(n => n.id)));
+    setTimeout(()=>{ document.getElementById('notifDot').style.display = 'none'; }, 250);
+  }
+}
+
+function closeNotifications(){
+  document.getElementById('notifPanel').classList.remove('open');
+  document.getElementById('notifBackdrop').classList.remove('open');
+}
+
+/* إغلاق قائمة التنبيهات عند الضغط بره الصندوق */
+document.addEventListener('click', function(e){
+  const wrap = document.getElementById('notifWrap');
+  const panel = document.getElementById('notifPanel');
+  if(!wrap.contains(e.target) && panel.classList.contains('open')){
+    panel.classList.remove('open');
+    document.getElementById('notifBackdrop').classList.remove('open');
+  }
+});
+
+/* ── TOP 10 ── */
+async function loadTop10(){
+  const el = document.getElementById('topTenList');
+  try{
+    const r = await fetch(sheetURL);
+    const rows = parseCsv(await r.text())
+      .filter(s=>s[0]&&s[0].trim());
+    // السيرفر بيرجع أعلى 10 بالفعل بعد الترتيب، فمفيش داعي نرتب أو نقطع تاني هنا
+    if(!rows.length){ el.innerHTML='<div class="msg">لا توجد بيانات</div>'; return; }
+    el.innerHTML = rows.map((s,i)=>{
+      const p = i+1;
+      const pc = p<=3?`p${p}`:'';
+      return `<div class="lb-row ${pc}" style="animation-delay:${i*0.05}s">
+        <div class="lb-num">${p}</div>
+        <div class="lb-name">${s[0]}</div>
+        <div class="lb-score">${s[1]}</div>
+      </div>`;
+    }).join('');
+  } catch(e){
+    el.innerHTML='<div class="msg error">تعذر التحميل</div>';
+  }
+}
+
+/* ── Groups ── */
+async function loadGroups(){
+  const el = document.getElementById('groupsList');
+  try{
+    const r = await fetch(groupsURL);
+    const txt = await r.text();
+    const rows = txt.split(/\r?\n/).filter(r=>r.trim()).slice(1).map(parseCsvRow)
+      .filter(r=>r[0]&&r[0].trim())
+      .sort((a,b)=>(parseFloat(b[1])||0)-(parseFloat(a[1])||0));
+    if(!rows.length){ el.innerHTML='<div class="msg">لا توجد بيانات</div>'; return; }
+    el.innerHTML = rows.map((g,i)=>{
+      const p = i+1;
+      const pc = p<=3?`p${p}`:'';
+      return `<div class="lb-row ${pc}" style="animation-delay:${i*0.05}s">
+        <div class="lb-num">${p}</div>
+        <div class="lb-name">${g[0]}</div>
+        <div class="lb-score">${g[1]}</div>
+      </div>`;
+    }).join('');
+  } catch(e){
+    el.innerHTML='<div class="msg error">تعذر التحميل</div>';
+  }
+}
+
+/* ── Tasks ── */
+async function loadTasks(){
+  const el = document.getElementById('tasksList');
+  try{
+    const r = await fetch(tasksURL);
+    const txt = await r.text();
+    const tasks = txt.split(/\r?\n/).filter(r=>r.trim()).slice(1).map(parseCsvRow)
+      .filter(r=>r[0]&&r[0].trim()).slice(0,3);
+    if(!tasks.length){ el.innerHTML='<div class="msg">لا توجد مهام</div>'; return; }
+    el.innerHTML = tasks.map((t,i)=>{
+      const n=t[0]||'', lk=t[1]||'';
+      return lk
+        ? `<a class="task-item" href="${lk}" target="_blank" rel="noopener" style="animation-delay:${i*0.07}s">• ${n}</a>`
+        : `<div class="task-item no-link" style="animation-delay:${i*0.07}s">• ${n}</div>`;
+    }).join('');
+  } catch(e){
+    el.innerHTML='<div class="msg error">تعذر التحميل</div>';
+  }
+}
+
+loadTop10();
+loadGroups();
+loadTasks();
+</script>
+</body>
+</html>
