@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>مهرجان الكرازة - ليأتِ ملكوتك</title>
+
+<!-- ─── SEO الأساسي ─── -->
+<meta name="description" content="مهرجان الكرازة «ليأتِ ملكوتك» — اعرف نتيجتك ودرجاتك، تابع ترتيبك وترتيب مجموعتك، وشارك في المهام والأسئلة التفاعلية أول بأول.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jj2318171-maker.github.io/Mahragan-e3dady/">
+
+<!-- ─── Open Graph (فيسبوك / واتساب / لينكدإن) ─── -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="مهرجان الكرازة - ليأتِ ملكوتك">
+<meta property="og:title" content="مهرجان الكرازة - ليأتِ ملكوتك">
+<meta property="og:description" content="اعرف نتيجتك ودرجاتك، تابع ترتيبك وترتيب مجموعتك، وشارك في المهام والأسئلة التفاعلية أول بأول.">
+<meta property="og:image" content="https://jj2318171-maker.github.io/Mahragan-e3dady/logo.jpg">
+<meta property="og:url" content="https://jj2318171-maker.github.io/Mahragan-e3dady/">
+<meta property="og:locale" content="ar_AR">
+
+<!-- ─── Twitter/X Card ─── -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="مهرجان الكرازة - ليأتِ ملكوتك">
+<meta name="twitter:description" content="اعرف نتيجتك ودرجاتك، تابع ترتيبك وترتيب مجموعتك، وشارك في المهام والأسئلة التفاعلية أول بأول.">
+<meta name="twitter:image" content="https://jj2318171-maker.github.io/Mahragan-e3dady/logo.jpg">
+
+<meta name="theme-color" content="#0d0a20">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* ── Elegant night-mood palette ── */
+  --gold: #ec4899;
+  --gold-soft: #ddd0ff;
+  --gold-deep: #4c6ef5;
+  --dot: #f5a623;
+  --teal: #22d3ee;
+  --wine: #c026d3;
+  --steel: #7c3aed;
+
+  --bg1: #0d0a20;
+  --bg2: #15113a;
+  --bg3: #1f1852;
+
+  --ink: #ece9f7;
+  --ink-soft: rgba(236,233,247,0.68);
+  --paper: #171236;
+  --paper-tint: #201a4a;
+  --paper-line: rgba(140,110,245,0.28);
+
+  --radius: 22px;
+  --radius-sm: 14px;
+  --border-w: 1px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 55%, var(--bg3) 100%);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Ambient glow (calm, no candy) ─── */
+.bg-orbs { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.24; animation: drift 34s ease-in-out infinite alternate; }
+.orb-1 { width: 560px; height: 560px; background: var(--gold); top: -220px; right: -160px; animation-duration: 38s; }
+.orb-2 { width: 460px; height: 460px; background: var(--steel); bottom: -180px; left: -120px; animation-duration: 42s; animation-delay: -8s; }
+.orb-3 { width: 380px; height: 380px; background: var(--wine); top: 42%; left: 32%; opacity: 0.12; animation-duration: 40s; animation-delay: -4s; }
+.orb-4 { width: 340px; height: 340px; background: var(--teal); top: 62%; right: 8%; opacity: 0.14; animation-duration: 36s; animation-delay: -12s; }
+
+@keyframes drift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, 40px) scale(1.1); }
+}
+
+/* ─── Soft stars instead of confetti ─── */
+.particles { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+.dot { position: absolute; opacity: 0; border-radius: 50%; animation: twinkle linear infinite; background: var(--dot); }
+@keyframes twinkle {
+  0% { opacity: 0; transform: translateY(0) scale(0.6); }
+  15% { opacity: 0.55; }
+  50% { opacity: 0.85; }
+  85% { opacity: 0.3; }
+  100% { opacity: 0; transform: translateY(-40px) scale(1); }
+}
+
+/* ─── Layout ─── */
+.page { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* ─── Top ribbon ─── */
+.header-strip {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 13px 20px;
+  background: linear-gradient(180deg, rgba(34,30,42,0.96), rgba(34,30,42,0.85));
+  border-bottom: 1px solid var(--paper-line);
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold-soft);
+  letter-spacing: .03em;
+  backdrop-filter: blur(6px);
+}
+.header-strip span.chip {
+  background: transparent;
+  border: 1px solid var(--paper-line);
+  border-radius: 99px;
+  padding: 5px 18px;
+  color: var(--gold);
+}
+
+/* ─── Main layout grid ─── */
+.main-grid {
+  flex: 1; display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  max-width: 620px; margin: 0 auto; width: 100%;
+  padding: 34px 22px 110px;
+  align-items: start;
+}
+
+/* ─── Center hero ─── */
+.hero { display: flex; flex-direction: column; align-items: center; gap: 0; }
+
+/* Logo ring */
+.logo-ring { position: relative; width: 102px; height: 102px; margin-bottom: 20px; }
+.logo-ring img { width: 102px; height: 102px; border-radius: 50%; object-fit: cover; position: relative; z-index: 2; border: 1px solid var(--paper-line); }
+
+/* اللوجو أكبر شوية في شاشة تسجيل الدخول بس */
+.login-wrap .logo-ring { width: 140px; height: 140px; }
+.login-wrap .logo-ring img { width: 140px; height: 140px; }
+.logo-ring::before {
+  content: ''; position: absolute; inset: -6px; border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--gold), var(--gold-deep), var(--gold-soft), var(--gold));
+  animation: spin 9s linear infinite; z-index: 1;
+  opacity: 0.85;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Festival badge */
+.festival-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background:
+    linear-gradient(135deg, #1c2a4d, #2a1f4d) padding-box,
+    linear-gradient(90deg, #7c3aed, #c026d3, #7c3aed) border-box;
+  border: 2px solid transparent;
+  border-radius: 99px;
+  padding: 14px 34px;
+  font-size: 17px;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .01em;
+  margin-bottom: 20px;
+  box-shadow: 0 0 22px -4px rgba(192,38,211,0.55);
+}
+
+/* Big headline */
+.hero-title {
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 700;
+  font-size: clamp(24px, 4.6vw, 38px);
+  line-height: 1.35;
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+.hero-title .hi { color: var(--gold); }
+
+.hero-church {
+  font-size: 12px; font-weight: 400;
+  color: var(--ink-soft);
+  text-align: center; letter-spacing: .02em;
+  margin-bottom: 10px;
+}
+
+.hero-sub {
+  font-size: 14px; color: var(--ink-soft);
+  text-align: center; line-height: 1.9; margin-bottom: 28px;
+}
+.hero-sub strong {
+  color: var(--gold); font-weight: 700;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+
+/* ─── Search card ─── */
+.search-card {
+  width: 100%;
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  position: relative;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.55);
+}
+.search-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.search-label {
+  font-size: 13px; font-weight: 600;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  color: var(--gold-soft);
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 6px;
+}
+
+.input-wrap { position: relative; margin-bottom: 16px; }
+
+input[type="text"] {
+  width: 100%;
+  padding: 17px 48px 17px 18px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: 'Cairo', sans-serif;
+  font-size: 19px; font-weight: 700;
+  text-align: center; letter-spacing: .1em;
+  outline: none;
+  transition: all .2s;
+}
+input[type="text"]::placeholder {
+  color: rgba(234,230,219,0.32); font-weight: 400; letter-spacing: 0; font-size: 15px;
+}
+input[type="text"]:focus {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--gold-deep);
+  box-shadow: 0 0 0 3px rgba(236,72,153,0.15);
+}
+.input-icon { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); font-size: 18px; opacity: .45; pointer-events: none; color: var(--gold-soft); }
+
+/* ─── Search button ─── */
+.btn-search {
+  width: 100%;
+  padding: 17px;
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold));
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #ffffff;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: pointer;
+  letter-spacing: .02em;
+  box-shadow: 0 14px 30px -10px rgba(236,72,153,0.45);
+  transition: transform .15s, box-shadow .15s, filter .15s;
+}
+.remember-me {
+  display: flex; align-items: center; gap: 9px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+}
+.remember-me input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0; height: 0;
+}
+.remember-box {
+  width: 20px; height: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--paper-line);
+  background: rgba(255,255,255,0.03);
+  position: relative;
+  flex-shrink: 0;
+  transition: all .2s;
+}
+.remember-box::after {
+  content: '';
+  position: absolute;
+  left: 6px; top: 2px;
+  width: 5px; height: 10px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity .15s;
+}
+.remember-me input[type="checkbox"]:checked + .remember-box {
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold));
+  border-color: var(--gold-deep);
+}
+.remember-me input[type="checkbox"]:checked + .remember-box::after { opacity: 1; }
+.remember-me input[type="checkbox"]:focus-visible + .remember-box {
+  box-shadow: 0 0 0 3px rgba(236,72,153,0.25);
+}
+.remember-text {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  font-family: 'Tajawal', sans-serif;
+}
+
+.btn-search:hover { transform: translateY(-2px); filter: brightness(1.06); }
+.btn-search:active { transform: translateY(0); filter: brightness(0.96); }
+
+/* ─── WhatsApp support button ─── */
+.whatsapp-support-btn {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 16px;
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  padding: 14px 18px;
+  background: #25D366;
+  color: #06210f;
+  border-radius: var(--radius-sm);
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 14px 30px -12px rgba(37,211,102,0.5);
+  transition: transform .15s, filter .15s;
+}
+.whatsapp-support-btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+.whatsapp-support-btn:active { transform: translateY(0); filter: brightness(0.95); }
+.whatsapp-support-btn svg { flex-shrink: 0; }
+
+/* ─── Result area ─── */
+#result { margin-top: 20px; width: 100%; }
+
+.msg {
+  text-align: center; padding: 16px;
+  color: var(--ink-soft);
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  animation: fadein .3s ease;
+}
+.msg.error { color: #d98a8a; }
+
+/* ─── Student ID card ─── */
+@keyframes cardPop {
+  0% { opacity: 0; transform: translateY(16px) scale(.96); }
+  100% { opacity: 1; transform: none; }
+}
+
+.id-card {
+  position: relative;
+  width: 100%; max-width: 560px; margin: 0 auto;
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border: 1px solid rgba(236,72,153,0.55);
+  border-radius: var(--radius);
+  overflow: hidden;
+  animation: cardPop .5s cubic-bezier(.2,.8,.2,1) both;
+  text-align: center;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.55), 0 0 12px -4px rgba(236,72,153,0.4), inset 0 0 0 1px rgba(236,72,153,0.06);
+}
+
+.id-card-band {
+  position: relative;
+  background: linear-gradient(90deg, rgba(236,72,153,0.28), rgba(236,72,153,0.08));
+  border-bottom: 1px solid rgba(236,72,153,0.4);
+  padding: 12px 18px;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.id-card-org { display: flex; align-items: center; gap: 8px; text-align: right; }
+.id-card-cross {
+  width: 30px; height: 30px; flex-shrink: 0;
+  border-radius: 50%; border: 1px solid var(--gold-deep);
+  background: transparent; color: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  overflow: hidden;
+}
+.id-card-cross img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.id-card-org-name { font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 700; font-size: 11.5px; color: var(--ink); line-height: 1.35; }
+.id-card-org-sub { font-size: 10px; font-weight: 500; color: var(--ink-soft); }
+.id-card-badge-tag {
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: 10px; font-weight: 600;
+  background: transparent; border: 1px solid var(--gold-deep); color: var(--gold-soft); border-radius: 99px;
+  padding: 5px 12px; white-space: nowrap; flex-shrink: 0;
+}
+
+.id-card-body {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: 14px; padding: 18px;
+  text-align: right;
+}
+
+.id-card-photo-wrap { flex-shrink: 0; }
+.id-card-photo {
+  width: 62px; height: 62px;
+  border-radius: 50%; border: 1px solid var(--gold-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; background: rgba(236,72,153,0.08);
+}
+
+.id-card-info { flex-shrink: 0; }
+.id-card-name {
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 700; font-size: 17px;
+  color: var(--ink);
+}
+.id-card-code { font-size: 11.5px; color: var(--ink-soft); font-weight: 500; letter-spacing: .03em; margin-top: 3px; }
+.id-card-code span { color: var(--gold); font-weight: 700; }
+
+.id-card-fields {
+  display: flex; flex: 1 1 220px; min-width: 200px;
+  gap: 8px;
+}
+.id-field {
+  flex: 1;
+  background: linear-gradient(135deg, rgba(236,72,153,0.16), rgba(236,72,153,0.05));
+  border: 1px solid rgba(236,72,153,0.35);
+  box-shadow: 0 0 12px -4px rgba(236,72,153,0.3);
+  border-radius: var(--radius-sm); padding: 9px 4px;
+}
+.id-field-icon { display: block; font-size: 14px; margin-bottom: 2px; opacity: .8; }
+.id-field-label { display: block; font-size: 9.5px; color: var(--ink-soft); font-weight: 600; margin-bottom: 2px; }
+.id-field-value { display: block; font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 13px; color: var(--ink); }
+
+.id-card-score {
+  flex-shrink: 0;
+  padding: 11px 20px;
+  background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold) 100%);
+  border: none; border-radius: var(--radius-sm);
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  box-shadow: 0 0 10px -1px rgba(236,72,153,0.75);
+}
+.id-card-score-label { font-size: 10px; font-weight: 700; color: #ffffff; letter-spacing: .03em; white-space: nowrap; }
+.id-card-score-value { font-family: 'Cairo', sans-serif; font-weight: 900; font-size: 24px; color: #ffffff; line-height: 1; }
+
+.id-card-footer { padding: 14px 16px 18px; border-top: 1px dashed var(--paper-line); }
+.id-card-fun { font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: 14px; font-weight: 500; color: var(--ink-soft); }
+
+/* ─── Side panels ─── */
+.side-panel { display: flex; flex-direction: column; gap: 16px; }
+
+/* ─── Collapsible section ─── */
+.collapsible {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(236,72,153,0.55);
+  background: var(--paper);
+  box-shadow: 0 20px 40px -18px rgba(0,0,0,0.5), 0 0 10px -3px rgba(236,72,153,0.35), inset 0 0 0 1px rgba(236,72,153,0.06);
+}
+
+.collapsible-btn {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, rgba(76,110,245,0.5), rgba(236,72,153,0.32));
+  border: none; border-bottom: 1px solid rgba(236,72,153,0.4);
+  color: var(--gold-soft);
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 700; font-size: 14.5px;
+  cursor: pointer;
+  transition: background .2s, box-shadow .2s;
+  text-align: right;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 8px -2px rgba(236,72,153,0.4);
+}
+.collapsible-btn:hover { background: linear-gradient(135deg, rgba(76,110,245,0.6), rgba(236,72,153,0.4)); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 12px -1px rgba(236,72,153,0.5); }
+.collapsible-btn.is-open { border-bottom-color: rgba(236,72,153,0.4); }
+.collapsible-btn .btn-label { display: flex; align-items: center; gap: 8px; }
+.collapsible-btn .arrow {
+  font-size: 13px; color: var(--gold); font-weight: 700;
+  transition: transform .3s; display: inline-block;
+}
+.collapsible-btn.is-open .arrow { transform: rotate(180deg); }
+
+.collapsible-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height .38s cubic-bezier(.2,.8,.2,1);
+  background: var(--paper-tint);
+}
+.collapsible-body.is-open { max-height: 600px; }
+.collapsible-body.admin-body.is-open { max-height: 80vh; overflow-y: auto; }
+.collapsible-inner { padding: 12px 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+
+/* ─── Leaderboard row ─── */
+.lb-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, rgba(236,72,153,0.14), rgba(236,72,153,0.05));
+  border: 1px solid rgba(236,72,153,0.32);
+  box-shadow: 0 0 6px -2px rgba(236,72,153,0.3);
+  transition: transform .15s, background .15s, box-shadow .15s;
+  animation: fadein .3s ease both;
+}
+.lb-row:hover { transform: translateX(-3px); background: linear-gradient(135deg, rgba(236,72,153,0.22), rgba(236,72,153,0.09)); box-shadow: 0 0 10px -2px rgba(236,72,153,0.5); border-color: rgba(236,72,153,0.5); }
+
+.lb-num {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 12px;
+  color: var(--ink);
+  background: rgba(236,72,153,0.18);
+  border: 1px solid rgba(236,72,153,0.5);
+}
+.lb-row.p1 .lb-num { background: var(--gold); color: #ffffff; border-color: var(--gold); }
+.lb-row.p2 .lb-num { background: #c7ccd6; color: #ffffff; border-color: #c7ccd6; }
+.lb-row.p3 .lb-num { background: #b98a5e; color: #ffffff; border-color: #b98a5e; }
+
+.lb-name {
+  flex: 1; font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 500; font-size: 13px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink);
+}
+.lb-score { font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 14px; color: var(--gold); flex-shrink: 0; }
+
+/* ─── Tasks ─── */
+.tasks-box {
+  background: var(--paper);
+  border: 1px solid rgba(236,72,153,0.55);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 40px -18px rgba(0,0,0,0.5), 0 0 10px -3px rgba(236,72,153,0.35), inset 0 0 0 1px rgba(236,72,153,0.06);
+}
+.tasks-head {
+  padding: 15px 18px;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 700; font-size: 14.5px; letter-spacing: .02em;
+  border-bottom: 1px solid rgba(236,72,153,0.4);
+  display: flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, rgba(76,110,245,0.5), rgba(236,72,153,0.32));
+  color: var(--gold-soft);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 8px -2px rgba(236,72,153,0.4);
+}
+.tasks-list { padding: 12px 12px 14px; display: flex; flex-direction: column; gap: 9px; background: var(--paper-tint); }
+
+.task-item {
+  display: block;
+  padding: 13px 16px;
+  border-radius: var(--radius-sm);
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+  font-weight: 500; font-size: 14px;
+  text-decoration: none;
+  border: 1px solid rgba(236,72,153,0.3);
+  transition: all .15s;
+  animation: fadein .3s ease both;
+}
+.task-item.no-link { color: var(--ink-soft); background: rgba(255,255,255,0.04); cursor: default; border-color: rgba(236,72,153,0.16); }
+a.task-item { color: var(--ink); background: linear-gradient(135deg, rgba(236,72,153,0.2), rgba(236,72,153,0.08)); box-shadow: 0 0 6px -2px rgba(236,72,153,0.35); }
+a.task-item:hover { transform: translateX(-2px); border-color: var(--gold-deep); background: linear-gradient(135deg, rgba(236,72,153,0.3), rgba(236,72,153,0.14)); box-shadow: 0 0 10px -2px rgba(236,72,153,0.5); }
+
+/* ─── Images ─── */
+.side-img {
+  border-radius: var(--radius);
+  width: 100%; display: block;
+  border: 1px solid var(--paper-line);
+  object-fit: cover;
+  box-shadow: 0 20px 40px -18px rgba(0,0,0,0.5);
+}
+
+/* ─── Footer ─── */
+footer {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+  text-align: center; padding: 16px 20px 6px;
+  font-size: 12px; font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 500;
+  color: var(--ink-soft);
+  background: linear-gradient(to top, rgba(24,21,32,0.98) 70%, transparent);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+footer.at-bottom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Utility ─── */
+@keyframes fadein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ─── MOBILE ─── */
+@media (max-width: 900px) {
+  .main-grid { grid-template-columns: 1fr; padding: 16px 14px 96px; gap: 16px; }
+  .col-center { order: 1; }
+  .col-left { order: 2; }
+  .hero-title { font-size: clamp(22px, 7vw, 32px); }
+  .id-card-score-value { font-size: 22px; }
+  .id-card-body { justify-content: center; }
+  .id-card-fields { flex: 1 1 100%; order: 3; }
+  .id-card-score { flex: 1 1 100%; flex-direction: row; justify-content: space-between; order: 4; }
+}
+
+/* ─── Quiz tasks (مهام تفاعلية) ─── */
+.task-item-quiz{
+  cursor: pointer; width: 100%; text-align: right; border: 1px solid rgba(236,72,153,0.3); font-family: inherit;
+  display:flex; align-items:center; justify-content:space-between; gap:8px;
+  color: var(--ink); background: linear-gradient(135deg, rgba(236,72,153,0.2), rgba(236,72,153,0.08));
+  box-shadow: 0 0 6px -2px rgba(236,72,153,0.35);
+}
+.task-item-quiz:hover{ transform: translateX(-2px); border-color: var(--gold-deep); background: linear-gradient(135deg, rgba(236,72,153,0.3), rgba(236,72,153,0.14)); box-shadow: 0 0 10px -2px rgba(236,72,153,0.5); }
+.task-quiz-tag{ font-size: 11px; color: var(--gold-soft); opacity:.8; }
+
+/* ─── Quiz full page (تفتح كصفحة جديدة، ستايل Google Forms بألوان الموقع) ─── */
+.quiz-page{
+  position:fixed; inset:0; z-index:9500;
+  background: linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 55%, var(--bg3) 100%);
+  display:none; flex-direction:column;
+  opacity:0; transform: translateY(18px);
+  transition: opacity .28s ease, transform .28s ease;
+}
+.quiz-page.open{ display:flex; opacity:1; transform:none; }
+
+.quiz-page-header{
+  position:sticky; top:0; z-index:2;
+  display:flex; align-items:center; gap:10px;
+  padding:9px 14px;
+  background: linear-gradient(180deg, rgba(23,18,54,0.97), rgba(23,18,54,0.88));
+  border-bottom:1px solid var(--paper-line);
+  backdrop-filter: blur(8px);
+}
+.quiz-back-btn{
+  width:30px; height:30px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:50%; border:1px solid var(--paper-line);
+  background: rgba(255,255,255,0.04); color: var(--gold);
+  cursor:pointer; transition: background .15s, transform .15s;
+}
+.quiz-back-btn:hover{ background: rgba(236,72,153,0.16); transform: translateX(2px); }
+.quiz-back-btn svg{ width:16px; height:16px; }
+.quiz-page-title{
+  font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:700;
+  font-size:13.5px; color:var(--ink); flex:1; overflow:hidden;
+  text-overflow:ellipsis; white-space:nowrap;
+}
+.quiz-progress-wrap{ padding:0 14px; margin-top:8px; }
+.quiz-progress-track{
+  height:6px; border-radius:99px; background:rgba(255,255,255,0.06); overflow:hidden;
+}
+.quiz-progress-bar{
+  height:100%; border-radius:99px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold));
+  transition: width .25s ease; width:0%;
+}
+.quiz-progress-label{
+  font-size:11.5px; color: var(--ink-soft); margin-top:6px; text-align:center;
+}
+
+.quiz-page-body{
+  flex:1; overflow-y:auto; padding:22px 18px 24px;
+}
+.quiz-form-wrap{ max-width:640px; margin:0 auto; display:flex; flex-direction:column; gap:16px; }
+
+/* Card على طراز جوجل فورم بألوان الموقع */
+.quiz-hero-card{
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border:1px solid var(--paper-line); border-radius: var(--radius);
+  padding:26px 22px; position:relative; overflow:hidden;
+}
+.quiz-hero-card::before{
+  content:''; position:absolute; top:0; left:0; right:0; height:6px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold), var(--wine));
+}
+.quiz-hero-card h3{
+  font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:800; font-size:21px;
+  color:var(--ink); margin-bottom:6px;
+}
+.quiz-hero-card .quiz-hero-sub{ font-size:13px; color:var(--ink-soft); }
+
+.quiz-q{
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border:1px solid var(--paper-line); border-radius: var(--radius);
+  padding:22px 20px; position:relative; overflow:hidden;
+  animation: fadein .35s ease;
+}
+.quiz-q::before{
+  content:''; position:absolute; top:0; bottom:0; right:0; width:4px;
+  background: linear-gradient(180deg, var(--gold-deep), var(--gold));
+}
+.quiz-q.quiz-q-missing{ border-color:#f43f5e; box-shadow: 0 0 0 3px rgba(244,63,94,0.25); animation: quizMissingPulse 1.8s ease; }
+@keyframes quizMissingPulse{ 0%{ box-shadow: 0 0 0 3px rgba(244,63,94,0.45); } 100%{ box-shadow: 0 0 0 3px rgba(244,63,94,0); } }
+.quiz-q-text{ font-weight:700; margin-bottom:16px; font-size:15.5px; color:var(--ink); line-height:1.7; }
+.quiz-q-text .quiz-q-num{ color:var(--gold); font-family:'Baloo Bhaijaan 2', sans-serif; }
+
+.quiz-opt{
+  display:flex; align-items:center; gap:12px;
+  width:100%; text-align:right; padding:13px 16px; margin-bottom:9px;
+  background:rgba(255,255,255,0.03); border:1px solid var(--paper-line); border-radius:var(--radius-sm);
+  color:var(--ink); cursor:pointer; font-family:'Tajawal',sans-serif; font-size:14.5px;
+  transition: border-color .15s, background .15s, transform .1s;
+}
+.quiz-opt:hover{ border-color: rgba(124,58,237,0.55); background: rgba(124,58,237,0.08); }
+.quiz-opt:active{ transform: scale(0.99); }
+.quiz-opt .quiz-opt-dot{
+  width:18px; height:18px; border-radius:50%; flex-shrink:0;
+  border:2px solid var(--paper-line); position:relative; transition: border-color .15s;
+}
+.quiz-opt.selected{ border-color: var(--gold-deep); background: rgba(236,72,153,0.12); }
+.quiz-opt.selected .quiz-opt-dot{ border-color: var(--gold); }
+.quiz-opt.selected .quiz-opt-dot::after{
+  content:''; position:absolute; inset:3px; border-radius:50%; background: var(--gold);
+}
+
+.quiz-submit-bar{
+  position:static; z-index:3;
+  padding:14px 0 4px;
+  margin-top:4px;
+}
+.quiz-submit-btn{
+  width:100%; max-width:640px; margin:0 auto; display:block;
+  padding:15px; border:none; border-radius:var(--radius-sm);
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold)); color:#fff;
+  font-family:'Baloo Bhaijaan 2',sans-serif; font-weight:700; font-size:15.5px; cursor:pointer;
+  box-shadow: 0 14px 30px -12px rgba(236,72,153,0.5);
+}
+.quiz-submit-btn:disabled{ opacity:.6; cursor:default; }
+
+.quiz-result{
+  text-align:center; padding:18px 20px; font-family:'Baloo Bhaijaan 2',sans-serif;
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border:1px solid var(--paper-line); border-radius: var(--radius);
+  width:100%; max-width:none; margin:0 auto; position:relative; overflow:hidden;
+}
+.quiz-result::before{
+  content:''; position:absolute; top:0; left:0; right:0; height:4px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold), var(--wine));
+}
+.quiz-result .quiz-result-icon{ font-size:30px; margin-bottom:6px; }
+.quiz-result .quiz-result-title{ font-size:15px; color:var(--ink); font-weight:700; }
+.quiz-result .score{ font-size:26px; color:var(--gold); font-weight:800; margin:8px 0 0; }
+.quiz-result .score .score-total{ font-size:16px; color:var(--ink-soft); font-weight:600; }
+
+.quiz-review-toggle-btn{
+  display:inline-flex; align-items:center; gap:8px;
+  margin-top:18px; padding:12px 26px; border-radius:99px;
+  background: transparent; border:1px solid var(--paper-line); color:var(--gold-soft);
+  font-family:'Baloo Bhaijaan 2',sans-serif; font-weight:600; font-size:14px; cursor:pointer;
+  transition: background .15s, border-color .15s;
+}
+.quiz-review-toggle-btn:hover{ border-color: var(--gold-deep); background: rgba(236,72,153,0.1); }
+
+.quiz-review-wrap{
+  max-width:640px; margin:18px auto 0; display:flex; flex-direction:column; gap:14px;
+}
+.quiz-review-q{
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border:1px solid var(--paper-line); border-radius: var(--radius-sm);
+  padding:18px 18px; text-align:right;
+}
+.quiz-review-q .quiz-q-text{ margin-bottom:12px; }
+.quiz-review-opt{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 14px; margin-bottom:7px; border-radius:12px;
+  font-size:14px; border:1px solid var(--paper-line); background: rgba(255,255,255,0.03);
+}
+.quiz-review-opt.is-correct{ border-color:#3ecf8e; background: rgba(62,207,142,0.12); color:#bdf2dc; }
+.quiz-review-opt.is-wrong{ border-color:#e05e5e; background: rgba(224,94,94,0.12); color:#f5c6c6; }
+.quiz-review-opt .tag{ font-size:12px; opacity:.85; }
+
+/* ─── Admin panel (لوحة إدارة المهام والأسئلة) ─── */
+.admin-form{ display:flex; flex-direction:column; gap:6px; text-align:right; }
+.admin-label{ font-size:12.5px; color:var(--ink-soft); font-weight:600; margin-top:8px; }
+.admin-input{
+  width:100%; padding:11px 14px; background:rgba(255,255,255,0.03);
+  border:1px solid var(--paper-line); border-radius:var(--radius-sm);
+  color:var(--ink); font-family:'Tajawal',sans-serif; font-size:14px; outline:none;
+}
+.admin-input:focus{ border-color: var(--gold-deep); }
+select.admin-input{ cursor:pointer; }
+textarea.admin-input{ resize:vertical; min-height:60px; }
+
+.admin-task-card{
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border:1px solid var(--paper-line); border-radius:var(--radius-sm);
+  padding:14px; margin-bottom:12px;
+}
+.admin-task-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:8px; }
+.admin-task-name{ font-family:'Baloo Bhaijaan 2',sans-serif; font-weight:700; font-size:15px; color:var(--ink); }
+.admin-task-id{ font-size:11px; color:var(--gold-soft); opacity:.8; margin-right:6px; }
+.admin-task-meta{ font-size:12px; color:var(--ink-soft); margin-top:6px; line-height:1.7; }
+.admin-btn-icon{
+  border:1px solid var(--paper-line); background:rgba(255,255,255,0.03); color:var(--ink-soft);
+  border-radius:10px; width:32px; height:32px; flex-shrink:0; cursor:pointer; font-size:14px;
+}
+.admin-btn-icon:hover{ background:rgba(236,72,153,0.12); border-color:var(--gold-deep); }
+
+.admin-q-list{ margin-top:12px; display:flex; flex-direction:column; gap:8px; }
+.admin-q-card{
+  background:rgba(255,255,255,0.03); border:1px solid var(--paper-line); border-radius:var(--radius-sm);
+  padding:10px 12px;
+}
+.admin-q-text{ font-size:13.5px; font-weight:600; color:var(--ink); margin-bottom:6px; display:flex; justify-content:space-between; gap:8px; }
+.admin-q-opts{ font-size:12px; color:var(--ink-soft); line-height:1.9; }
+.admin-q-opts .correct{ color:var(--gold); font-weight:700; }
+.admin-q-points{ font-size:11px; color:var(--gold-soft); opacity:.85; margin-top:4px; }
+
+.admin-add-q-btn{
+  width:100%; margin-top:12px; padding:10px; border:1px dashed var(--paper-line); border-radius:var(--radius-sm);
+  background:transparent; color:var(--gold-soft); font-family:'Baloo Bhaijaan 2',sans-serif; font-weight:600;
+  font-size:13px; cursor:pointer;
+}
+.admin-add-q-btn:hover{ background:rgba(236,72,153,0.08); border-color:var(--gold-deep); }
+.admin-add-q-form{ margin-top:12px; padding-top:12px; border-top:1px dashed var(--paper-line); }
+.admin-correct-choices{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+.admin-correct-choice{
+  flex:1 1 60px; text-align:center; padding:8px 4px; border:1px solid var(--paper-line); border-radius:var(--radius-sm);
+  cursor:pointer; font-size:13px; color:var(--ink-soft); background:rgba(255,255,255,0.03);
+}
+.admin-correct-choice.selected{ border-color:var(--gold-deep); background:rgba(236,72,153,0.14); color:var(--gold-soft); font-weight:700; }
+.admin-msg{ font-size:12.5px; margin-top:8px; }
+
+@media (max-width: 480px) {
+  .header-strip { font-size: 11px; padding: 9px 12px; }
+  .logo-ring { width: 82px; height: 82px; }
+  .logo-ring img { width: 82px; height: 82px; }
+  .login-wrap .logo-ring { width: 112px; height: 112px; }
+  .login-wrap .logo-ring img { width: 112px; height: 112px; }
+}
+
+/* loading spinner */
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid var(--paper-tint);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  margin: 20px auto;
+}
+
+/* ═══════════════════════════════════════
+   LOGIN GATE
+   ═══════════════════════════════════════ */
+.is-hidden { display: none !important; }
+
+.login-screen {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 40px 20px 120px;
+  position: relative; z-index: 1;
+  transition: opacity .4s ease, transform .4s ease;
+}
+.login-screen.leaving { opacity: 0; transform: scale(.97) translateY(-10px); pointer-events: none; }
+.login-wrap { width: 100%; max-width: 420px; display: flex; flex-direction: column; align-items: center; }
+
+#appContent { animation: fadein .5s ease both; }
+
+/* ─── Header icon buttons (notifications / logout) ─── */
+.header-strip { position: sticky; top: 0; z-index: 100; }
+.header-icon-btn {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 1px solid var(--paper-line); background: rgba(255,255,255,0.03);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; line-height: 1; cursor: pointer; color: var(--gold-soft);
+  transition: transform .15s, background .15s;
+  position: absolute; top: 50%; transform: translateY(-50%);
+}
+.header-icon-btn:hover { background: rgba(236,72,153,0.1); }
+.header-icon-btn:active { transform: translateY(-50%) scale(0.95); }
+
+.right-wrap { right: 14px; position: absolute; top: 50%; transform: translateY(-50%); display: flex; gap: 8px; }
+.right-wrap .header-icon-btn { position: static; transform: none; }
+.right-wrap .header-icon-btn:active { transform: scale(0.95); }
+.notif-wrap { left: 14px; position: absolute; top: 50%; transform: translateY(-50%); display: flex; gap: 8px; }
+.notif-wrap .header-icon-btn { position: static; transform: none; }
+.notif-wrap .header-icon-btn:active { transform: scale(0.95); }
+
+.tasks-pill-btn {
+  height: 38px; padding: 0 14px; border-radius: 19px;
+  border: 1px solid var(--paper-line); background: rgba(255,255,255,0.03);
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer; color: var(--gold-soft);
+  transition: transform .15s, background .15s;
+}
+.tasks-pill-btn:hover { background: rgba(236,72,153,0.1); }
+.tasks-pill-btn:active { transform: scale(0.95); }
+.tasks-pill-emoji { font-size: 15px; line-height: 1; }
+.tasks-pill-label {
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 700; font-size: 13px;
+}
+.header-strip > .posts-btn { position: static; transform: none; }
+.header-strip > .posts-btn:active { transform: scale(0.95); }
+
+/* ─── Posts page (الشاشة الرئيسية بعد الدخول) ─── */
+.posts-screen {
+  flex: 1; display: flex; flex-direction: column;
+  animation: fadein .5s ease both;
+}
+.posts-body { padding: 18px; flex: 1; max-width: 640px; margin: 0 auto; width: 100%; }
+
+/* ─── Brand block at the top of the home/posts screen ─── */
+.posts-brand { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 26px; }
+.posts-brand .logo-ring { margin-bottom: 16px; }
+.posts-section-title {
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 700; font-size: 16px;
+  color: var(--gold-soft); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.posts-grid { display: flex; flex-direction: column; gap: 16px; margin-top: 14px; }
+.post-card {
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border: 1.5px solid var(--gold-deep); border-radius: 26px;
+  padding: 16px; position: relative;
+  box-shadow: 0 20px 45px -18px rgba(0,0,0,0.55);
+}
+.post-card-top {
+  display: flex; align-items: center; gap: 10px;
+  padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--paper-line);
+}
+.post-title-wrap { display: flex; align-items: center; gap: 10px; text-align: right; }
+.post-title-text h4 {
+  font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 14px;
+  color: var(--ink); margin-bottom: 3px; line-height: 1.3;
+}
+.post-title-text span { font-size: 11.5px; color: var(--ink-soft); }
+.post-title-logo {
+  width: 38px; height: 38px; border-radius: 50%; object-fit: cover;
+  border: 1px solid var(--paper-line); flex-shrink: 0;
+}
+.post-card-image-wrap {
+  border-radius: 18px; overflow: hidden; border: 1px solid var(--paper-line);
+}
+.post-card img { width: 100%; display: block; max-height: 520px; object-fit: cover; }
+.post-caption { padding: 2px 4px 14px; font-size: 14px; color: var(--ink); line-height: 1.8; }
+.add-post-box {
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border: 1px solid var(--paper-line); border-radius: var(--radius);
+  padding: 18px; margin-bottom: 6px;
+}
+.add-post-box textarea {
+  width: 100%; min-height: 70px; background: rgba(255,255,255,0.03);
+  border: 1px solid var(--paper-line); border-radius: var(--radius-sm);
+  color: var(--ink); padding: 12px; font-family: 'Tajawal', sans-serif;
+  font-size: 14px; resize: vertical; margin-bottom: 12px; outline: none;
+}
+.add-post-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.add-post-file-label {
+  border: 1px dashed var(--paper-line); border-radius: var(--radius-sm);
+  padding: 10px 16px; font-size: 13px; color: var(--gold-soft); cursor: pointer;
+}
+.add-post-preview { max-width: 100%; max-height: 220px; border-radius: var(--radius-sm); margin-top: 12px; display: none; }
+.btn-add-post {
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold));
+  border: none; border-radius: var(--radius-sm); color: #ffffff;
+  font-weight: 700; padding: 11px 22px; cursor: pointer;
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: 14px;
+}
+.btn-add-post:active { transform: scale(0.97); }
+
+/* ── نظام سريالات الحضور ── */
+.attendance-redeem-box {
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border: 1px solid var(--paper-line); border-radius: var(--radius);
+  padding: 18px; margin-top: 14px; width: 100%; max-width: 420px;
+}
+.attendance-redeem-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+.attendance-redeem-row input {
+  flex: 1; min-width: 140px; background: rgba(255,255,255,0.03);
+  border: 1px solid var(--paper-line); border-radius: var(--radius-sm);
+  color: var(--ink); padding: 11px 12px; font-family: 'Tajawal', sans-serif;
+  font-size: 15px; letter-spacing: 1px; outline: none;
+}
+.msg.success { color: #7ee0a8; }
+.attendance-serials-output {
+  margin-top: 14px; background: rgba(255,255,255,0.03);
+  border: 1px dashed var(--paper-line); border-radius: var(--radius-sm);
+  padding: 14px; direction: ltr; text-align: left;
+}
+.attendance-serials-output .serial-line {
+  font-family: 'Courier New', monospace; font-size: 15px; letter-spacing: 1px;
+  color: var(--ink); padding: 4px 0; border-bottom: 1px dashed var(--paper-line);
+}
+.attendance-serials-output .serial-line:last-child { border-bottom: none; }
+.btn-print-serials {
+  margin-top: 12px; width: 100%;
+  background: linear-gradient(135deg, var(--gold-deep), var(--gold));
+  border: none; border-radius: var(--radius-sm); color: #fff;
+  font-weight: 700; padding: 13px 20px; cursor: pointer;
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: 15px;
+}
+.btn-print-serials:active { transform: scale(0.97); }
+
+.notif-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(6,8,14,0.55);
+  opacity: 0; visibility: hidden;
+  transition: opacity .25s ease;
+  z-index: 9998;
+}
+.notif-backdrop.open { opacity: 1; visibility: visible; }
+
+.notif-panel {
+  position: fixed; top: 64px; left: 14px;
+  width: 300px; max-width: 86vw;
+  max-height: 0; overflow: hidden;
+  background: var(--paper); border: 1px solid var(--paper-line);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
+  transition: max-height .3s ease, opacity .3s ease, transform .3s ease;
+  opacity: 0; transform: translateY(-10px);
+  z-index: 9999;
+}
+.notif-panel.open { max-height: 70vh; opacity: 1; overflow-y: auto; transform: translateY(0); }
+.notif-panel-head {
+  padding: 13px 14px;
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 600; font-size: 13.5px;
+  border-bottom: 1px solid var(--paper-line); background: rgba(236,72,153,0.08); color: var(--gold-soft);
+}
+.notif-panel-list { padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+
+/* لوحة المهام بتاخد نفس تنسيق قايمة المهام في البروفايل */
+.tasks-panel .tasks-list { padding: 8px; }
+
+/* لوحة سريال الحضور بتفتح تحت الأيقونة اللي في الشمال (right-wrap) */
+.serial-panel { left: auto; right: 14px; }
+@media (max-width: 480px){
+  .serial-panel { right: 8px; }
+}
+
+/* ─── Welcome toast (منبثقة "أهلاً يا...") ─── */
+.welcome-toast {
+  position: fixed; top: 74px; left: 50%;
+  transform: translateX(-50%) translateY(-14px);
+  min-width: 220px; max-width: 90vw;
+  background: linear-gradient(180deg, var(--paper), var(--paper-tint));
+  border: 1px solid var(--gold-deep);
+  border-radius: var(--radius-sm);
+  padding: 12px 22px;
+  box-shadow: 0 25px 55px -18px rgba(0,0,0,0.6), 0 0 22px -6px rgba(236,72,153,0.55);
+  z-index: 10000;
+  opacity: 0; pointer-events: none;
+  transition: opacity .35s ease, transform .35s ease;
+  text-align: center;
+}
+.welcome-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.welcome-toast-text {
+  font-family: 'Baloo Bhaijaan 2', sans-serif; font-weight: 700; font-size: 15px;
+  color: var(--ink); white-space: nowrap;
+}
+.welcome-toast-text .hi { color: var(--gold); }
+
+
+@media (max-width: 480px) {
+  .header-icon-btn { width: 32px; height: 32px; font-size: 14px; }
+  .right-wrap { right: 8px; gap: 6px; }
+  .notif-wrap { left: 8px; gap: 6px; }
+  .notif-panel { top: 56px; left: 8px; width: calc(100vw - 16px); }
+  .posts-body { padding: 14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- BG -->
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+</div>
+<div class="particles" id="particles" aria-hidden="true"></div>
+
+<div class="page">
+
+  <div class="header-strip">
+    <span class="chip" id="headerChip">✝ مهرجان الكرازة 2026 ✝</span>
+
+    <div class="notif-wrap is-hidden" id="notifWrap">
+      <button class="tasks-pill-btn" id="tasksBtn" onclick="toggleTasks()" title="المهام" aria-label="المهام">
+        <span class="tasks-pill-emoji">⚡</span><span class="tasks-pill-label">Tasks</span>
+      </button>
+    </div>
+
+    <button class="header-icon-btn posts-btn is-hidden" id="postsBtn" onclick="goToPosts()" title="الرئيسية" aria-label="الرئيسية">
+      🏠
+    </button>
+
+    <div class="right-wrap is-hidden" id="rightWrap">
+      <button class="header-icon-btn admin-btn is-hidden" id="adminBtn" onclick="goToAdmin()" title="لوحة الإدارة" aria-label="لوحة الإدارة">🛠️</button>
+      <button class="header-icon-btn rank-btn" id="rankBtn" onclick="goToRank()" title="الترتيب" aria-label="الترتيب">🏆</button>
+      <button class="header-icon-btn serial-btn" id="serialBtn" onclick="toggleSerialPanel()" title="سريال الحضور" aria-label="سريال الحضور">🎫</button>
+      <button class="header-icon-btn profile-btn" id="profileBtn" onclick="goToProfile()" title="الملف الشخصي" aria-label="الملف الشخصي">👤</button>
+    </div>
+  </div>
+
+  <!-- ── منبثقة الترحيب بعد الدخول ── -->
+  <div class="welcome-toast" id="welcomeToast">
+    <div class="welcome-toast-text" id="welcomeToastText">أهلاً بيك 👋</div>
+  </div>
+
+  <!-- ══ LOGIN SCREEN ══ -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-wrap">
+      <div class="logo-ring">
+        <img src="logo.jpg" alt="شعار الخدمة" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22102%22 height=%22102%22%3E%3Ccircle cx=%2251%22 cy=%2251%22 r=%2251%22 fill=%22%23171236%22/%3E%3Ctext x=%2251%22 y=%2260%22 text-anchor=%22middle%22 fill=%22%23ec4899%22 font-size=%2232%22%3E✝%3C/text%3E%3C/svg%3E'">
+      </div>
+      <div class="festival-badge">مهرجان ليأتِ ملكوتك</div>
+      <p class="hero-church">خدمة فتيان اعدادي — كنيسة الشهيد العظيم مارمينا — مطرانية الأقباط الأرثوذكس بالفيوم</p>
+      <p class="hero-sub" style="margin-top:6px;">برجاء تسجيل الدخول</p>
+
+      <div class="search-card">
+        <div class="search-label"><span class="icon"></span> الكود الخاص بك</div>
+        <div class="input-wrap">
+          <span class="input-icon">#</span>
+          <input type="text" id="loginCodeInput" placeholder="اكتب الكود هنا" inputmode="numeric" autocomplete="off" onkeydown="if(event.key==='Enter') loginStudent()">
+        </div>
+        <label class="remember-me">
+          <input type="checkbox" id="rememberMeCheck" checked>
+          <span class="remember-box"></span>
+          <span class="remember-text">تذكرني</span>
+        </label>
+        <button class="btn-search" onclick="loginStudent()">🔓 دخول</button>
+        <div id="loginResult"></div>
+      </div>
+
+      <a class="whatsapp-support-btn" href="https://wa.me/201273177874" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2m0 1.67c2.2 0 4.27.86 5.82 2.42 1.56 1.56 2.42 3.63 2.42 5.82 0 4.54-3.7 8.23-8.24 8.23-1.4 0-2.78-.36-4-1.04l-.29-.17-3.12.82.83-3.04-.19-.31a8.2 8.2 0 0 1-1.13-4.2c0-4.54 3.7-8.24 8.24-8.24Z"/>
+          <path d="M9.1 6.9c-.18-.4-.37-.41-.54-.42h-.46c-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.03 0 1.2.87 2.36.99 2.52.12.16 1.68 2.7 4.16 3.68 2.06.82 2.48.66 2.93.62.45-.04 1.45-.6 1.65-1.17.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.46-.28-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.77.96-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.44-1.35-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.32-.75-1.81Z"/>
+        </svg>
+        <span>لو عندك مشكلة في الموقع تواصل معانا</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="main-grid is-hidden" id="appContent">
+
+    <!-- ── CENTER: Student Card ── -->
+    <div class="hero col-center">
+
+      <div id="dashboardResult"></div>
+
+    </div>
+
+  </div>
+
+  <!-- ══ RANK PAGE ══ -->
+  <div class="main-grid is-hidden" id="rankScreen">
+    <div class="hero col-center" style="width:100%;">
+
+      <div class="posts-section-title" style="justify-content:center;">🏆 الترتيب</div>
+
+      <div class="side-panel" style="width:100%;">
+        <div class="collapsible">
+          <button class="collapsible-btn" onclick="toggleSection(this,'topPanel')" aria-expanded="false">
+            <span class="btn-label">🏆 <span>TOP 10</span></span>
+            <span class="arrow">▾</span>
+          </button>
+          <div class="collapsible-body" id="topPanel">
+            <div class="collapsible-inner" id="topTenList">
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapsible">
+          <button class="collapsible-btn" onclick="toggleSection(this,'groupsPanel')" aria-expanded="false">
+            <span class="btn-label">🏅 <span>ترتيب المجموعات</span></span>
+            <span class="arrow">▾</span>
+          </button>
+          <div class="collapsible-body" id="groupsPanel">
+            <div class="collapsible-inner" id="groupsList">
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ POSTS PAGE (الشاشة الرئيسية) ══ -->
+  <div class="posts-screen is-hidden" id="postsScreen">
+    <div class="posts-body">
+      <div class="posts-brand">
+        <div class="logo-ring">
+          <img src="logo.jpg" alt="شعار الخدمة" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22102%22 height=%22102%22%3E%3Ccircle cx=%2251%22 cy=%2251%22 r=%2251%22 fill=%22%23171236%22/%3E%3Ctext x=%2251%22 y=%2260%22 text-anchor=%22middle%22 fill=%22%23ec4899%22 font-size=%2232%22%3E✝%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="festival-badge">مهرجان ليأتِ ملكوتك</div>
+        <p class="hero-church">خدمة فتيان اعدادي — كنيسة الشهيد العظيم مارمينا — مطرانية الأقباط الأرثوذكس بالفيوم</p>
+      </div>
+
+      <div class="posts-section-title">🖼️ آخر المنشورات</div>
+
+      <div class="add-post-box is-hidden" id="addPostBox">
+        <div class="search-label" style="margin-bottom:12px;">➕ إضافة منشور جديد</div>
+        <textarea id="postCaptionInput" placeholder="اكتب تعليق (اختياري)..."></textarea>
+        <div class="add-post-actions">
+          <label class="add-post-file-label">
+            📷 اختر صورة
+            <input type="file" accept="image/*" id="postImageInput" style="display:none;" onchange="previewPostImage(event)">
+          </label>
+          <button class="btn-add-post" onclick="submitPost()">نشر</button>
+        </div>
+        <img id="postImagePreview" class="add-post-preview">
+        <div id="postSubmitStatus"></div>
+      </div>
+
+      <div class="posts-grid" id="postsGrid">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ADMIN PAGE (لوحة الإدارة - أسئلة المهام) ══ -->
+  <div class="main-grid is-hidden" id="adminScreen">
+    <div class="hero col-center" style="width:100%;">
+
+      <div class="posts-section-title" style="justify-content:center;">🛠️ لوحة إدارة المهام والأسئلة</div>
+
+      <div class="side-panel" style="width:100%;">
+
+        <!-- ── إضافة مهمة جديدة ── -->
+        <div class="collapsible">
+          <button class="collapsible-btn" onclick="toggleSection(this,'adminAddTaskPanel')" aria-expanded="false">
+            <span class="btn-label">➕ <span>إضافة مهمة جديدة</span></span>
+            <span class="arrow">▾</span>
+          </button>
+          <div class="collapsible-body admin-body" id="adminAddTaskPanel">
+            <div class="collapsible-inner">
+              <div class="admin-form">
+                <label class="admin-label">اسم المهمة</label>
+                <input type="text" class="admin-input" id="adminTaskName" placeholder="مثال: تاسك دراسي 3">
+
+                <label class="admin-label">نوع المهمة</label>
+                <select class="admin-input" id="adminTaskType" onchange="onAdminTaskTypeChange()">
+                  <option value="quiz">مهمة تفاعلية (كويز داخل الموقع)</option>
+                  <option value="link">رابط خارجي (فورم عادي)</option>
+                </select>
+
+                <label class="admin-label">كود المهمة (TaskID) — بالإنجليزي وفريد</label>
+                <input type="text" class="admin-input" id="adminTaskId" placeholder="مثال: study3" dir="ltr">
+
+                <div id="adminTaskScoreColWrap">
+                  <label class="admin-label">عمود السكور في شيت SCORE (مثال: I)</label>
+                  <input type="text" class="admin-input" id="adminTaskScoreColumn" placeholder="مثال: I" dir="ltr" style="text-transform:uppercase;">
+                </div>
+
+                <div id="adminTaskLinkWrap" class="is-hidden">
+                  <label class="admin-label">الرابط الخارجي</label>
+                  <input type="text" class="admin-input" id="adminTaskLink" placeholder="https://..." dir="ltr">
+                </div>
+
+                <button class="quiz-submit-btn" style="margin-top:14px;" onclick="submitAdminAddTask()">إضافة المهمة</button>
+                <div id="adminTaskStatus"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── توليد أوراق حضور (سريالات) ── -->
+        <div class="collapsible">
+          <button class="collapsible-btn" onclick="toggleSection(this,'adminAttendancePanel')" aria-expanded="false">
+            <span class="btn-label">🎫 <span>توليد أوراق حضور</span></span>
+            <span class="arrow">▾</span>
+          </button>
+          <div class="collapsible-body admin-body" id="adminAttendancePanel">
+            <div class="collapsible-inner">
+              <div class="admin-form">
+                <label class="admin-label">اسم اللقاء (هيتكتب على الورقة)</label>
+                <input type="text" class="admin-input" id="attGenLabel" placeholder="مثال: تسبحة 3">
+
+                <label class="admin-label">عمود الحضور في شيت SCORE (مثال: E)</label>
+                <input type="text" class="admin-input" id="attGenColumn" placeholder="مثال: E" dir="ltr" style="text-transform:uppercase;">
+
+                <label class="admin-label">الدرجة اللي هتتكتب في العمود ده</label>
+                <input type="text" class="admin-input" id="attGenScore" inputmode="numeric" placeholder="مثال: 10">
+
+                <label class="admin-label">عدد الأوراق المطلوبة</label>
+                <input type="text" class="admin-input" id="attGenCount" inputmode="numeric" placeholder="مثال: 40">
+
+                <button class="quiz-submit-btn" style="margin-top:14px;" onclick="submitGenerateAttendanceSerials()">توليد السريالات</button>
+                <div id="attGenStatus"></div>
+                <div id="attGenOutput"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── المهام الحالية وأسئلتها ── -->
+        <div class="collapsible">
+          <button class="collapsible-btn" onclick="toggleSection(this,'adminTasksPanel')" aria-expanded="false">
+            <span class="btn-label">📋 <span>المهام الحالية</span></span>
+            <span class="arrow">▾</span>
+          </button>
+          <div class="collapsible-body admin-body" id="adminTasksPanel">
+            <div class="collapsible-inner" id="adminTasksList">
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>✝ خدمة فتيان اعدادي — 2026 ✝</footer>
+
+<!-- موضوعة هنا كأبناء مباشرين لل body عشان تظهر دايمًا فوق كل حاجة -->
+
+<!-- ── لوحة المهام ── -->
+<div class="notif-backdrop" id="tasksBackdrop" onclick="closeTasks()"></div>
+<div class="notif-panel tasks-panel" id="tasksPanel">
+  <div class="notif-panel-head">⚡ المهام</div>
+  <div class="notif-panel-list tasks-list" id="tasksList">
+    <div class="spinner"></div>
+  </div>
+</div>
+
+<!-- ── لوحة سريال الحضور ── -->
+<div class="notif-backdrop" id="serialBackdrop" onclick="closeSerialPanel()"></div>
+<div class="notif-panel serial-panel" id="serialPanel">
+  <div class="notif-panel-head">🎫 معاك سريال كود؟</div>
+  <div class="notif-panel-list">
+    <div class="attendance-redeem-row">
+      <input type="text" id="headerSerialInput" placeholder="اكتب السريال هنا" dir="ltr" style="text-transform:uppercase;" onkeydown="if(event.key==='Enter') submitHeaderAttendanceSerial()">
+      <button class="btn-add-post" onclick="submitHeaderAttendanceSerial()">تسجيل</button>
+    </div>
+    <div id="headerSerialStatus"></div>
+  </div>
+</div>
+
+<!-- ── مهمة تفاعلية (كويز) — بتفتح كصفحة جديدة كاملة ── -->
+<div class="quiz-page" id="quizPage">
+  <div class="quiz-page-header">
+    <button class="quiz-back-btn" onclick="closeQuizModal()" title="رجوع" aria-label="رجوع">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="quiz-page-title" id="quizPageTitle">مهمة تفاعلية</div>
+  </div>
+  <div class="quiz-progress-wrap" id="quizProgressWrap" style="display:none;">
+    <div class="quiz-progress-track"><div class="quiz-progress-bar" id="quizProgressBar"></div></div>
+    <div class="quiz-progress-label" id="quizProgressLabel"></div>
+  </div>
+  <div class="quiz-page-body" id="quizModalContent"><div class="spinner"></div></div>
+</div>
+
+
+<script>
+/* ── Soft twinkling stars (calm night mood) ── */
+const pLayer = document.getElementById('particles');
+const colors = ['#ddd0ff','#ec4899','#4c6ef5','#f5a623'];
+for(let i = 0; i < 26; i++){
+  const d = document.createElement('div');
+  d.className = 'dot';
+  const sz = Math.random() * 2.5 + 1.5;
+  d.style.cssText = `
+    width:${sz}px; height:${sz}px;
+    left:${Math.random()*100}%;
+    top:${Math.random()*100}%;
+    background:${colors[Math.floor(Math.random()*colors.length)]};
+    animation-duration:${Math.random()*6+4}s;
+    animation-delay:${Math.random()*8}s;
+  `;
+  pLayer.appendChild(d);
+}
+
+/* ── Toggle collapsible ── */
+function toggleSection(btn, panelId){
+  const body = document.getElementById(panelId);
+  const isOpen = body.classList.toggle('is-open');
+  btn.classList.toggle('is-open', isOpen);
+  btn.setAttribute('aria-expanded', isOpen);
+}
+
+/* ── CSV helpers ── */
+function parseCsvRow(row){
+  const cells = []; let cur = '', inQ = false;
+  for(let i = 0; i < row.length; i++){
+    const ch = row[i];
+    if(ch === '"'){ if(inQ && row[i+1]==='"'){ cur+='"'; i++; } else inQ=!inQ; }
+    else if(ch===',' && !inQ){ cells.push(cur.trim()); cur=''; }
+    else cur+=ch;
+  }
+  cells.push(cur.trim()); return cells;
+}
+function parseCsv(txt){
+  return txt.split(/\r?\n/).filter(r=>r.trim()).slice(1).map(parseCsvRow);
+}
+
+/* ── Proxy URL (Apps Script) ── */
+/* استبدل الرابط ده برابط الـ Web App بتاعك بعد الـ Deploy */
+const PROXY_URL = "https://script.google.com/macros/s/AKfycbznoc5OuFOGHiWZWS6eqiSGm0dcU9EgjSIak984bwQQoi0nayoAUtW53IuGrjd3D4cl5Q/exec";
+const sheetURL  = PROXY_URL + "?type=top10";
+const groupsURL = PROXY_URL + "?type=groups";
+const tasksURL  = PROXY_URL + "?type=tasks";
+
+/* ── Rank visuals ── */
+function rankVis(rank){
+  const r = parseInt(rank,10);
+  if(r===1) return { icon:'🥇', bg:'#cba765', shadow:'', glow:'rgba(203,167,101,0.28)' };
+  if(r===2) return { icon:'🥈', bg:'#c7ccd6', shadow:'', glow:'rgba(199,204,214,0.28)' };
+  if(r===3) return { icon:'🥉', bg:'#b98a5e', shadow:'', glow:'rgba(185,138,94,0.28)' };
+  return { icon:'🎓', bg:'#7c3aed', shadow:'', glow:'rgba(124,58,237,0.28)' };
+}
+
+/* ═══════════════════════════════════════
+   POSTS
+   ═══════════════════════════════════════ */
+const ADMIN_CODE = '999000';
+let currentStudentCode = '';
+let selectedPostImageBase64 = null;
+let selectedPostImageMime = null;
+
+/* -- عنوان الموقع الثابت + دالة لتغيير عنوان التاب حسب الشاشة المفتوحة -- */
+const SITE_TITLE = 'مهرجان الكرازة - ليأتِ ملكوتك';
+function setPageTitle(sectionName){
+  document.title = sectionName ? `${sectionName} | ${SITE_TITLE}` : SITE_TITLE;
+}
+
+/* -- عرض شاشة المنشورات (الشاشة الرئيسية بعد الدخول) -- */
+function goToPosts(){
+  document.getElementById('appContent').classList.add('is-hidden');
+  document.getElementById('rankScreen').classList.add('is-hidden');
+  document.getElementById('adminScreen').classList.add('is-hidden');
+  document.getElementById('postsScreen').classList.remove('is-hidden');
+  setPageTitle('المنشورات');
+  const addBox = document.getElementById('addPostBox');
+  if(currentStudentCode === ADMIN_CODE){
+    addBox.classList.remove('is-hidden');
+  } else {
+    addBox.classList.add('is-hidden');
+  }
+  loadPosts();
+}
+
+/* -- زر البروفايل: يفتح صفحة الطالب الشخصية -- */
+function goToProfile(){
+  document.getElementById('postsScreen').classList.add('is-hidden');
+  document.getElementById('rankScreen').classList.add('is-hidden');
+  document.getElementById('adminScreen').classList.add('is-hidden');
+  document.getElementById('appContent').classList.remove('is-hidden');
+  setPageTitle('بروفايلي');
+}
+
+/* -- زر الترتيب: يفتح صفحة الترتيب (TOP 10 + المجموعات) -- */
+function goToRank(){
+  document.getElementById('postsScreen').classList.add('is-hidden');
+  document.getElementById('appContent').classList.add('is-hidden');
+  document.getElementById('adminScreen').classList.add('is-hidden');
+  document.getElementById('rankScreen').classList.remove('is-hidden');
+  setPageTitle('الترتيب');
+  loadTop10();
+  loadGroups();
+}
+
+/* -- زر لوحة الإدارة: يفتح شاشة إضافة/إدارة المهام والأسئلة (أدمن بس) -- */
+function goToAdmin(){
+  if(currentStudentCode !== ADMIN_CODE) return;
+  document.getElementById('postsScreen').classList.add('is-hidden');
+  document.getElementById('rankScreen').classList.add('is-hidden');
+  document.getElementById('appContent').classList.add('is-hidden');
+  document.getElementById('adminScreen').classList.remove('is-hidden');
+  setPageTitle('لوحة الإدارة');
+  loadAdminData();
+}
+
+/* -- تجهيز الصورة المختارة قبل الرفع -- */
+function previewPostImage(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  selectedPostImageMime = file.type;
+  const reader = new FileReader();
+  reader.onload = function(ev){
+    selectedPostImageBase64 = ev.target.result.split(',')[1];
+    const img = document.getElementById('postImagePreview');
+    img.src = ev.target.result;
+    img.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+}
+
+/* ═══════════════════════════════════════
+   نظام سريالات الحضور
+   (خانة الطالب اتنقلت للوحة المنسدلة في الشريط العلوي، شوف submitHeaderAttendanceSerial)
+   ═══════════════════════════════════════ */
+
+/* -- الأدمن بيولّد أوراق حضور (سريالات) جديدة -- */
+async function submitGenerateAttendanceSerials(){
+  const status = document.getElementById('attGenStatus');
+  const output = document.getElementById('attGenOutput');
+  const label = document.getElementById('attGenLabel').value.trim();
+  const column = document.getElementById('attGenColumn').value.trim().toUpperCase();
+  const score = parseInt(document.getElementById('attGenScore').value.trim(), 10);
+  const count = parseInt(document.getElementById('attGenCount').value.trim(), 10);
+
+  if(!label || !column){
+    status.innerHTML = '<div class="msg error admin-msg">اكتب اسم اللقاء وعمود الحضور الأول</div>';
+    return;
+  }
+  if(!score || score < 1){
+    status.innerHTML = '<div class="msg error admin-msg">اكتب الدرجة اللي هتتكتب في العمود</div>';
+    return;
+  }
+  if(!count || count < 1){
+    status.innerHTML = '<div class="msg error admin-msg">اكتب عدد أوراق صحيح</div>';
+    return;
+  }
+  status.innerHTML = '<div class="spinner"></div>';
+  output.innerHTML = '';
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        action: 'generateAttendanceSerials',
+        code: currentStudentCode,
+        label, column, score, count
+      })
+    });
+    const res = await r.json();
+    if(res.success && res.serials && res.serials.length){
+      status.innerHTML = `<div class="msg admin-msg">✅ اتولد ${res.serials.length} سريال لـ "${label}"</div>`;
+      lastGeneratedAttendance = { label, serials: res.serials };
+      output.innerHTML = `<div class="attendance-serials-output">${res.serials.map(s=>`<div class="serial-line">${s}</div>`).join('')}</div>
+        <button class="btn-print-serials" onclick="printAttendanceSerialsCards()">🖨️ طباعة الأكواد PDF</button>`;
+    } else {
+      status.innerHTML = `<div class="msg error admin-msg">⚠️ حصل خطأ: ${res.error || 'حاول تاني'}</div>`;
+    }
+  } catch(e){
+    status.innerHTML = '<div class="msg error admin-msg">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+  }
+}
+
+/* -- آخر دفعة سريالات اتولدت (بتتحفظ عشان زر الطباعة يستخدمها) -- */
+let lastGeneratedAttendance = { label: '', serials: [] };
+
+/* -- طباعة كروت السريالات (كل كارت قد كارت الشحن: اسم اللقاء + الكود) -- */
+function printAttendanceSerialsCards(){
+  const { label, serials } = lastGeneratedAttendance;
+  if(!serials || !serials.length){
+    alert('مفيش سريالات متولدة عشان تتطبع، ولّد الأول');
+    return;
+  }
+
+  const cardsHtml = serials.map(s => `
+    <div class="serial-card">
+      <div class="serial-card-label">${label}</div>
+      <div class="serial-card-code">${s}</div>
+    </div>
+  `).join('');
+
+  const printWin = window.open('', '_blank');
+  if(!printWin){
+    alert('المتصفح منع فتح نافذة الطباعة، اسمح بالنوافذ المنبثقة وحاول تاني');
+    return;
+  }
+
+  printWin.document.write(`
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>طباعة سريالات - ${label}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 8mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Tajawal', sans-serif; background: #fff; color: #111; }
+
+  .toolbar {
+    text-align: center; margin-bottom: 8mm;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .toolbar button {
+    font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 14px;
+    padding: 10px 26px; border-radius: 8px; border: none;
+    background: #4c6ef5; color: #fff; cursor: pointer;
+  }
+  .toolbar span {
+    font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 13px; color: #555;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4mm;
+  }
+  .serial-card {
+    border: 1.5px dashed #999;
+    border-radius: 8px;
+    padding: 4mm 3mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5mm;
+    height: 28mm;
+    text-align: center;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .serial-card-label {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.3;
+  }
+  .serial-card-code {
+    font-family: 'Courier New', monospace;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    direction: ltr;
+    color: #000;
+  }
+
+  @media print {
+    .toolbar { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="toolbar">
+    <button onclick="window.print()">🖨️ طباعة / حفظ PDF</button>
+    <span>عدد الأكواد: ${serials.length}</span>
+  </div>
+  <div class="cards-grid">
+    ${cardsHtml}
+  </div>
+</body>
+</html>
+  `);
+  printWin.document.close();
+}
+
+/* -- نشر بوست جديد (أدمن بس) -- */
+async function submitPost(){
+  const caption = document.getElementById('postCaptionInput').value.trim();
+  const status = document.getElementById('postSubmitStatus');
+  if(!caption && !selectedPostImageBase64){
+    status.innerHTML = '<div class="msg error">اكتب تعليق أو اختار صورة الأول</div>';
+    return;
+  }
+  status.innerHTML = '<div class="spinner"></div>';
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        action: 'addPost',
+        code: currentStudentCode,
+        caption: caption,
+        image: selectedPostImageBase64,
+        mimeType: selectedPostImageMime
+      })
+    });
+    const res = await r.json();
+    if(res.success){
+      status.innerHTML = '';
+      document.getElementById('postCaptionInput').value = '';
+      document.getElementById('postImageInput').value = '';
+      document.getElementById('postImagePreview').style.display = 'none';
+      selectedPostImageBase64 = null;
+      selectedPostImageMime = null;
+      loadPosts();
+    } else {
+      status.innerHTML = '<div class="msg error">⚠️ حصل خطأ: ' + (res.error || 'حاول تاني') + '</div>';
+    }
+  } catch(e){
+    status.innerHTML = '<div class="msg error">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+  }
+}
+
+/* -- تحميل وعرض المنشورات -- */
+async function loadPosts(){
+  const grid = document.getElementById('postsGrid');
+  grid.innerHTML = '<div class="spinner"></div>';
+  try{
+    const r = await fetch(PROXY_URL + '?type=posts');
+    const posts = await r.json();
+    if(!posts || !posts.length){
+      grid.innerHTML = '<div class="msg">لا توجد منشورات حالياً</div>';
+      return;
+    }
+    grid.innerHTML = posts.map(p => `
+      <div class="post-card">
+        <div class="post-card-top">
+          <div class="post-title-text">
+            <h4>خدمة فتيان اعدادي</h4>
+            <span>${formatShortDate(p.date)}</span>
+          </div>
+        </div>
+        ${p.caption ? `<div class="post-caption">${p.caption}</div>` : ''}
+        ${p.imageUrl ? `<div class="post-card-image-wrap"><img src="${p.imageUrl}" alt="منشور" loading="lazy"></div>` : ''}
+      </div>
+    `).join('');
+  } catch(e){
+    grid.innerHTML = '<div class="msg error">تعذر تحميل المنشورات</div>';
+  }
+}
+
+/* -- تنسيق تاريخ قصير على طريقة فيسبوك (دلوقتي، منذ س، منذ يوم، أو تاريخ مختصر) -- */
+function formatShortDate(raw){
+  if(!raw) return '';
+  const d = new Date(raw);
+  if(isNaN(d.getTime())) return raw; // لو التاريخ مش قابل للتحويل، اعرضه زي ما هو
+  const diffMs = Date.now() - d.getTime();
+  const diffSec = Math.floor(diffMs / 1000);
+  if(diffSec < 60) return 'الآن';
+  const diffMin = Math.floor(diffSec / 60);
+  if(diffMin < 60) return `منذ ${diffMin} د`;
+  const diffHr = Math.floor(diffMin / 60);
+  if(diffHr < 24) return `منذ ${diffHr} س`;
+  const diffDay = Math.floor(diffHr / 24);
+  if(diffDay < 7) return `منذ ${diffDay} يوم`;
+  return d.toLocaleDateString('ar-EG', { day:'numeric', month:'short' });
+}
+
+/* ═══════════════════════════════════════
+   LOGIN GATE + DASHBOARD
+   ═══════════════════════════════════════ */
+const LOGIN_KEY = 'kerazaStudentCode';
+
+/* -- عرض بيانات الطالب على شكل كارنيه/بادچ جامعي -- */
+function renderDashboard(s){
+  const v = rankVis(s.rank);
+  document.getElementById('dashboardResult').innerHTML = `
+    <div class="id-card">
+      <div class="id-card-band">
+        <div class="id-card-org">
+          <span class="id-card-cross"><img src="favicon.png" alt="شعار الخدمة" onerror="this.parentElement.innerHTML='✝'"></span>
+          <div>
+            <div class="id-card-org-name">خدمة فتيان اعدادي</div>
+            <div class="id-card-org-sub">مهرجان الكرازة 2026</div>
+          </div>
+        </div>
+        <div class="id-card-badge-tag">${v.icon} كارنيه الطالب</div>
+      </div>
+
+      <div class="id-card-body">
+        <div class="id-card-photo-wrap">
+          <div class="id-card-photo" style="background:${v.bg};">${v.icon}</div>
+        </div>
+
+        <div class="id-card-info">
+          <div class="id-card-name">${s.name}</div>
+          <div class="id-card-code">كود الطالب: <span>${s.code || '—'}</span></div>
+        </div>
+
+        <div class="id-card-fields">
+          <div class="id-field">
+            <span class="id-field-icon">🏫</span>
+            <span class="id-field-label">الفصل</span>
+            <span class="id-field-value">${s.class}</span>
+          </div>
+          <div class="id-field">
+            <span class="id-field-icon">👥</span>
+            <span class="id-field-label">المجموعة</span>
+            <span class="id-field-value">${s.group}</span>
+          </div>
+          <div class="id-field">
+            <span class="id-field-icon">🏆</span>
+            <span class="id-field-label">الترتيب</span>
+            <span class="id-field-value">${s.rank}</span>
+          </div>
+        </div>
+
+        <div class="id-card-score">
+          <span class="id-card-score-label">إجمالي السكور</span>
+          <span class="id-card-score-value">${s.score}</span>
+        </div>
+      </div>
+
+      <div class="id-card-footer">
+        <div class="id-card-fun">أشطر كتكوت ده ولا ايه 🙈🐣</div>
+      </div>
+    </div>`;
+}
+
+/* -- منبثقة الترحيب: بتظهر 3 ثواني وبعدين تختفي لوحدها -- */
+let welcomeToastTimer = null;
+function showWelcomeToast(name){
+  const toast = document.getElementById('welcomeToast');
+  const text = document.getElementById('welcomeToastText');
+
+  text.innerHTML = `أهلاً يا <span class="hi">${name}</span> 👋`;
+
+  toast.classList.remove('show');
+  requestAnimationFrame(()=>{ toast.classList.add('show'); });
+
+  clearTimeout(welcomeToastTimer);
+  welcomeToastTimer = setTimeout(()=>{
+    toast.classList.remove('show');
+  }, 5000);
+}
+
+/* -- الانتقال من شاشة الدخول للشاشة الرئيسية (Posts) -- */
+function showApp(studentName){
+  const loginScreen = document.getElementById('loginScreen');
+  loginScreen.classList.add('leaving');
+  setTimeout(()=>{
+    loginScreen.classList.add('is-hidden');
+    loginScreen.classList.remove('leaving');
+    document.getElementById('appContent').classList.add('is-hidden');
+    goToPosts();
+  }, 380);
+  document.getElementById('rightWrap').classList.remove('is-hidden');
+  document.getElementById('notifWrap').classList.remove('is-hidden');
+  document.getElementById('postsBtn').classList.remove('is-hidden');
+  document.getElementById('headerChip').classList.add('is-hidden');
+  showWelcomeToast(studentName);
+  setTimeout(checkFooterVisibility, 450);
+}
+
+/* -- الرجوع لشاشة الدخول -- */
+function showLogin(){
+  document.getElementById('appContent').classList.add('is-hidden');
+  document.getElementById('postsScreen').classList.add('is-hidden');
+  document.getElementById('rankScreen').classList.add('is-hidden');
+  document.getElementById('adminScreen').classList.add('is-hidden');
+  const loginScreen = document.getElementById('loginScreen');
+  loginScreen.classList.remove('is-hidden');
+  document.getElementById('rightWrap').classList.add('is-hidden');
+  document.getElementById('notifWrap').classList.add('is-hidden');
+  document.getElementById('postsBtn').classList.add('is-hidden');
+  document.getElementById('adminBtn').classList.add('is-hidden');
+  document.getElementById('headerChip').classList.remove('is-hidden');
+  setPageTitle();
+  document.getElementById('tasksPanel').classList.remove('open');
+  document.getElementById('tasksBackdrop').classList.remove('open');
+  document.getElementById('welcomeToast').classList.remove('show');
+  document.getElementById('loginCodeInput').value = '';
+  document.getElementById('loginResult').innerHTML = '';
+  document.getElementById('rememberMeCheck').checked = true;
+  currentStudentCode = '';
+  setTimeout(checkFooterVisibility, 50);
+}
+
+/* -- تسجيل الدخول بالكود -- */
+async function loginStudent(){
+  const code = document.getElementById('loginCodeInput').value.trim();
+  const res = document.getElementById('loginResult');
+  if(!code){ res.innerHTML='<div class="msg">اكتب الكود الخاص بك أولاً 👆</div>'; return; }
+  res.innerHTML = '<div class="spinner"></div>';
+  try{
+    const r = await fetch(PROXY_URL + "?type=student&code=" + encodeURIComponent(code));
+    const s = await r.json();
+    if(s.found){
+      s.code = code;
+      currentStudentCode = code;
+      const remember = document.getElementById('rememberMeCheck').checked;
+      if(remember){
+        localStorage.setItem(LOGIN_KEY, code);
+      } else {
+        localStorage.removeItem(LOGIN_KEY);
+      }
+      if(code === ADMIN_CODE){
+        document.getElementById('adminBtn').classList.remove('is-hidden');
+      } else {
+        document.getElementById('adminBtn').classList.add('is-hidden');
+      }
+      res.innerHTML = '';
+      renderDashboard(s);
+      showApp(s.name);
+    } else {
+      res.innerHTML = '<div class="msg error">❌ مش لاقي الكود ده، تأكد من الأرقام وحاول تاني</div>';
+    }
+  } catch(e){
+    res.innerHTML = '<div class="msg error">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+  }
+}
+
+/* -- تسجيل خروج -- */
+function logoutUser(){
+  localStorage.removeItem(LOGIN_KEY);
+  showLogin();
+}
+
+/* -- تعبئة الكود المحفوظ في الخانة (من غير دخول تلقائي) عشان الطالب يدوس "دخول" بنفسه -- */
+function prefillSavedCode(){
+  const code = localStorage.getItem(LOGIN_KEY);
+  if(code){
+    document.getElementById('loginCodeInput').value = code;
+  }
+}
+
+/* ── لوحة المهام ── */
+function toggleTasks(){
+  const panel = document.getElementById('tasksPanel');
+  const backdrop = document.getElementById('tasksBackdrop');
+  const isOpen = panel.classList.toggle('open');
+  backdrop.classList.toggle('open', isOpen);
+}
+function closeTasks(){
+  document.getElementById('tasksPanel').classList.remove('open');
+  document.getElementById('tasksBackdrop').classList.remove('open');
+}
+
+/* إغلاق لوحة المهام عند الضغط بره الصندوق */
+document.addEventListener('click', function(e){
+  const notifWrap = document.getElementById('notifWrap');
+  const tasksPanel = document.getElementById('tasksPanel');
+  if(!notifWrap.contains(e.target) && tasksPanel.classList.contains('open')){
+    closeTasks();
+  }
+});
+
+/* ── لوحة سريال الحضور ── */
+function toggleSerialPanel(){
+  const panel = document.getElementById('serialPanel');
+  const backdrop = document.getElementById('serialBackdrop');
+  const isOpen = panel.classList.toggle('open');
+  backdrop.classList.toggle('open', isOpen);
+}
+function closeSerialPanel(){
+  document.getElementById('serialPanel').classList.remove('open');
+  document.getElementById('serialBackdrop').classList.remove('open');
+}
+
+/* إغلاق لوحة السريال عند الضغط بره الصندوق */
+document.addEventListener('click', function(e){
+  const serialBtn = document.getElementById('serialBtn');
+  const serialPanel = document.getElementById('serialPanel');
+  if(!serialBtn || !serialPanel) return;
+  if(!serialBtn.contains(e.target) && !serialPanel.contains(e.target) && serialPanel.classList.contains('open')){
+    closeSerialPanel();
+  }
+});
+
+/* -- الطالب بيدخل سريال الحضور بتاعه من الشريط العلوي -- */
+async function submitHeaderAttendanceSerial(){
+  const input = document.getElementById('headerSerialInput');
+  const status = document.getElementById('headerSerialStatus');
+  const serial = input.value.trim().toUpperCase();
+  if(!serial){
+    status.innerHTML = '<div class="msg error">اكتب السريال الأول</div>';
+    return;
+  }
+  status.innerHTML = '<div class="spinner"></div>';
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        action: 'redeemAttendanceSerial',
+        code: currentStudentCode,
+        serial: serial
+      })
+    });
+    const res = await r.json();
+    if(res.success){
+      status.innerHTML = `<div class="msg success">✅ تم تسجيل حضورك في "${res.label || 'اللقاء'}"</div>`;
+      input.value = '';
+    } else {
+      status.innerHTML = `<div class="msg error">⚠️ ${res.error || 'السريال غير صحيح'}</div>`;
+    }
+  } catch(e){
+    status.innerHTML = '<div class="msg error">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+  }
+}
+
+/* ── TOP 10 ── */
+async function loadTop10(){
+  const el = document.getElementById('topTenList');
+  try{
+    const r = await fetch(sheetURL);
+    const rows = parseCsv(await r.text())
+      .filter(s=>s[0]&&s[0].trim());
+    // السيرفر بيرجع أعلى 10 بالفعل بعد الترتيب، فمفيش داعي نرتب أو نقطع تاني هنا
+    if(!rows.length){ el.innerHTML='<div class="msg">لا توجد بيانات</div>'; return; }
+    el.innerHTML = rows.map((s,i)=>{
+      const p = i+1;
+      const pc = p<=3?`p${p}`:'';
+      return `<div class="lb-row ${pc}" style="animation-delay:${i*0.05}s">
+        <div class="lb-num">${p}</div>
+        <div class="lb-name">${s[0]}</div>
+        <div class="lb-score">${s[1]}</div>
+      </div>`;
+    }).join('');
+  } catch(e){
+    el.innerHTML='<div class="msg error">تعذر التحميل</div>';
+  }
+}
+
+/* ── Groups ── */
+async function loadGroups(){
+  const el = document.getElementById('groupsList');
+  try{
+    const r = await fetch(groupsURL);
+    const txt = await r.text();
+    const rows = txt.split(/\r?\n/).filter(r=>r.trim()).slice(1).map(parseCsvRow)
+      .filter(r=>r[0]&&r[0].trim())
+      .sort((a,b)=>(parseFloat(b[1])||0)-(parseFloat(a[1])||0));
+    if(!rows.length){ el.innerHTML='<div class="msg">لا توجد بيانات</div>'; return; }
+    el.innerHTML = rows.map((g,i)=>{
+      const p = i+1;
+      const pc = p<=3?`p${p}`:'';
+      return `<div class="lb-row ${pc}" style="animation-delay:${i*0.05}s">
+        <div class="lb-num">${p}</div>
+        <div class="lb-name">${g[0]}</div>
+        <div class="lb-score">${g[1]}</div>
+      </div>`;
+    }).join('');
+  } catch(e){
+    el.innerHTML='<div class="msg error">تعذر التحميل</div>';
+  }
+}
+
+/* ── Tasks ── */
+async function loadTasks(){
+  const el = document.getElementById('tasksList');
+  try{
+    const r = await fetch(tasksURL);
+    const txt = await r.text();
+    const tasks = txt.split(/\r?\n/).filter(r=>r.trim()).slice(1).map(parseCsvRow)
+      .filter(r=>r[0]&&r[0].trim());
+    if(!tasks.length){ el.innerHTML='<div class="msg">لا توجد مهام</div>'; return; }
+    el.innerHTML = tasks.map((t,i)=>{
+      const n=t[0]||'', lk=t[1]||'', type=(t[2]||'').trim().toLowerCase(), taskId=(t[4]||'').trim();
+      const status=(t[5]||'').trim().toLowerCase(); // ✅ عمود جديد: draft/published (فاضي = منشورة، للمهام القديمة)
+      if(type === 'quiz' && taskId){
+        if(status === 'draft') return ''; // ✅ لسه الأدمن بيحضّر أسئلتها، متتظهرش للطلاب
+        return `<button type="button" class="task-item task-item-quiz" style="animation-delay:${i*0.07}s" onclick="openQuizTask('${taskId}','${n.replace(/'/g,"\\'")}')">• ${n} <span class="task-quiz-tag">📝 مهمة تفاعلية</span></button>`;
+      }
+      return lk
+        ? `<a class="task-item" href="${lk}" target="_blank" rel="noopener" style="animation-delay:${i*0.07}s">• ${n}</a>`
+        : `<div class="task-item no-link" style="animation-delay:${i*0.07}s">• ${n}</div>`;
+    }).join('');
+  } catch(e){
+    el.innerHTML='<div class="msg error">تعذر التحميل</div>';
+  }
+}
+
+/* ══════════ QUIZ TASKS ══════════ */
+let currentQuizTaskId = null;
+let currentQuizAnswers = [];
+let currentQuizQuestionsCount = 0;
+let currentQuizQuestionsData = []; // نص السؤال + الاختيارات، بنحتفظ بيها عشان مراجعة الإجابات بعد التسليم
+let quizReviewOpen = false;
+
+function updateQuizProgress(){
+  const total = currentQuizQuestionsCount || 1;
+  const answered = currentQuizAnswers.filter(a => a !== null).length;
+  const pct = Math.round((answered/total)*100);
+  const bar = document.getElementById('quizProgressBar');
+  const label = document.getElementById('quizProgressLabel');
+  if(bar) bar.style.width = pct + '%';
+  if(label) label.textContent = `${answered} من ${total} تمت الإجابة عليه`;
+}
+
+async function openQuizTask(taskId, taskName){
+  currentQuizTaskId = taskId;
+  currentQuizQuestionsData = [];
+  quizReviewOpen = false;
+  const page = document.getElementById('quizPage');
+  const content = document.getElementById('quizModalContent');
+  const progressWrap = document.getElementById('quizProgressWrap');
+  document.getElementById('quizPageTitle').textContent = taskName || 'مهمة تفاعلية';
+  setPageTitle(taskName || 'مهمة تفاعلية');
+  progressWrap.style.display = 'none';
+  content.innerHTML = '<div class="spinner"></div>';
+  page.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  try{
+    const r = await fetch(PROXY_URL + '?type=taskQuestions&taskId=' + encodeURIComponent(taskId) + '&code=' + encodeURIComponent(currentStudentCode || ''));
+    const data = await r.json();
+    if(data.error){
+      content.innerHTML = `<div class="msg error">تعذر تحميل المهمة: ${data.error}</div>`;
+      return;
+    }
+    if(data.alreadySubmitted){
+      content.innerHTML = `
+        <div class="quiz-form-wrap">
+          <div class="quiz-result">
+            <div class="quiz-result-icon">✅</div>
+            <div class="quiz-result-title">سبق وسلمت المهمة دي</div>
+            <div class="score">${data.previousScore}<span class="score-total"> / ${data.total}</span></div>
+          </div>
+          <div class="quiz-review-wrap">${renderQuizReview(data.reviewQuestions)}</div>
+        </div>`;
+      return;
+    }
+    document.getElementById('quizPageTitle').textContent = data.taskName || taskName || 'مهمة تفاعلية';
+    currentQuizAnswers = new Array(data.questions.length).fill(null);
+    currentQuizQuestionsCount = data.questions.length;
+    currentQuizQuestionsData = data.questions;
+    progressWrap.style.display = 'block';
+
+    content.innerHTML = `
+      <div class="quiz-form-wrap">
+        <div class="quiz-hero-card">
+          <h3>📝 ${data.taskName || ''}</h3>
+          <div class="quiz-hero-sub">جاوب على كل الأسئلة وبعدين اضغط "إرسال الإجابات" في الآخر</div>
+        </div>
+        ${data.questions.map((q, qi) => `
+          <div class="quiz-q" id="quizQ-${qi}">
+            <div class="quiz-q-text"><span class="quiz-q-num">${qi+1}.</span> ${q.question}</div>
+            ${q.options.map((opt, oi) => `
+              <button type="button" class="quiz-opt" id="qopt-${qi}-${oi}" onclick="selectQuizOption(${qi}, ${oi})">
+                <span class="quiz-opt-dot"></span><span>${opt}</span>
+              </button>
+            `).join('')}
+          </div>
+        `).join('')}
+        <div id="quizSubmitStatus"></div>
+      </div>
+      <div class="quiz-submit-bar">
+        <button class="quiz-submit-btn" onclick="submitQuizTask()">إرسال الإجابات</button>
+      </div>
+    `;
+    updateQuizProgress();
+  } catch(e){
+    content.innerHTML = '<div class="msg error">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+  }
+}
+
+function selectQuizOption(qIndex, oIndex){
+  currentQuizAnswers[qIndex] = oIndex;
+  document.querySelectorAll(`[id^="qopt-${qIndex}-"]`).forEach(b => b.classList.remove('selected'));
+  document.getElementById(`qopt-${qIndex}-${oIndex}`).classList.add('selected');
+  updateQuizProgress();
+}
+
+let quizSubmitInProgress = false;
+
+async function submitQuizTask(){
+  const status = document.getElementById('quizSubmitStatus');
+  if(quizSubmitInProgress){
+    return; // امنع أي ضغطة تانية لحد ما الطلب الأول يخلص
+  }
+  const missingIndex = currentQuizAnswers.findIndex(a => a === null);
+  if(missingIndex !== -1){
+    status.innerHTML = `<div class="msg error">انت ناسي سؤال رقم ${missingIndex + 1} 👆 لازم تجاوب عليه الأول</div>`;
+    const qEl = document.getElementById(`quizQ-${missingIndex}`);
+    if(qEl){
+      qEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      qEl.classList.add('quiz-q-missing');
+      setTimeout(() => qEl.classList.remove('quiz-q-missing'), 1800);
+    }
+    return;
+  }
+  if(!currentStudentCode){
+    status.innerHTML = '<div class="msg error">لازم تسجل دخول الأول</div>';
+    return;
+  }
+
+  quizSubmitInProgress = true;
+  const submitBtn = document.querySelector('.quiz-submit-btn');
+  if(submitBtn){ submitBtn.disabled = true; }
+  status.innerHTML = '<div class="spinner"></div>';
+
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        action: 'submitTask',
+        code: currentStudentCode,
+        taskId: currentQuizTaskId,
+        answers: currentQuizAnswers
+      })
+    });
+    const res = await r.json();
+    const content = document.getElementById('quizModalContent');
+    const progressWrap = document.getElementById('quizProgressWrap');
+    if(res.success){
+      progressWrap.style.display = 'none';
+      content.innerHTML = `
+        <div class="quiz-form-wrap">
+          <div class="quiz-result">
+            <div class="quiz-result-icon">🎉</div>
+            <div class="quiz-result-title">تم تسليم المهمة بنجاح</div>
+            <div class="score">${res.score} / ${res.total}</div>
+            <button class="quiz-review-toggle-btn" onclick="toggleQuizReview()" id="quizReviewBtn">👁️ عرض إجاباتك</button>
+          </div>
+          <div id="quizReviewWrap"></div>
+        </div>`;
+      // إزالة شريط الإرسال السفلي لو موجود
+      const bar = document.querySelector('.quiz-submit-bar');
+      if(bar) bar.remove();
+      loadTop10();
+    } else if(res.error === 'already submitted'){
+      progressWrap.style.display = 'none';
+      content.innerHTML = `
+        <div class="quiz-form-wrap">
+          <div class="quiz-result">
+            <div class="quiz-result-icon">✅</div>
+            <div class="quiz-result-title">سبق وسلمت المهمة دي</div>
+            <div class="score">${res.previousScore}<span class="score-total"> / ${res.total}</span></div>
+          </div>
+        </div>`;
+      const bar = document.querySelector('.quiz-submit-bar');
+      if(bar) bar.remove();
+    } else {
+      status.innerHTML = `<div class="msg error">⚠️ حصل خطأ: ${res.error || 'حاول تاني'}</div>`;
+      quizSubmitInProgress = false;
+      if(submitBtn){ submitBtn.disabled = false; }
+    }
+  } catch(e){
+    status.innerHTML = '<div class="msg error">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+    quizSubmitInProgress = false;
+    if(submitBtn){ submitBtn.disabled = false; }
+  }
+}
+
+/* ── عرض إجابات الطالب بعد التسليم: بنلوّن اختياره بس (أخضر لو صح / أحمر لو غلط)
+   من غير ما نكشف الإجابة الصحيحة لو كان غلطان، عشان محدش يغش زمايله ── */
+function renderQuizReview(reviewQuestions){
+  if(!reviewQuestions || !reviewQuestions.length){
+    return '<div class="msg" style="font-size:12.5px;">تعذر تحميل تفاصيل إجاباتك دلوقتي</div>';
+  }
+  return reviewQuestions.map((q, qi) => {
+    const userIdx = q.studentAnswer;
+    const hasAnswer = userIdx !== null && userIdx !== undefined;
+    return `
+      <div class="quiz-review-q">
+        <div class="quiz-q-text"><span class="quiz-q-num">${qi+1}.</span> ${q.question}</div>
+        ${(q.options||[]).map((opt, oi) => {
+          let cls = '';
+          let tag = '';
+          if(hasAnswer && oi === userIdx){
+            if(q.isCorrect === true){ cls = 'is-correct'; tag = '✔ إجابتك صح'; }
+            else if(q.isCorrect === false){ cls = 'is-wrong'; tag = '✘ إجابتك غلط'; }
+            else { tag = 'إجابتك'; }
+          }
+          return `<div class="quiz-review-opt ${cls}"><span>${opt}</span>${tag ? `<span class="tag">${tag}</span>` : ''}</div>`;
+        }).join('')}
+      </div>`;
+  }).join('');
+}
+
+async function toggleQuizReview(){
+  const wrap = document.getElementById('quizReviewWrap');
+  const btn = document.getElementById('quizReviewBtn');
+  if(quizReviewOpen){
+    wrap.innerHTML = '';
+    wrap.classList.remove('quiz-review-wrap');
+    quizReviewOpen = false;
+    if(btn) btn.textContent = '👁️ عرض إجاباتك';
+    return;
+  }
+  if(btn) btn.textContent = '... جاري التحميل';
+  try{
+    // دلوقتي التسليم اتسجل بالفعل، فالسيرفر هيرجع reviewQuestions فيها إجابتك وهل هي صح ولا غلط
+    const r = await fetch(PROXY_URL + '?type=taskQuestions&taskId=' + encodeURIComponent(currentQuizTaskId) + '&code=' + encodeURIComponent(currentStudentCode || ''));
+    const data = await r.json();
+
+    wrap.classList.add('quiz-review-wrap');
+    wrap.innerHTML = renderQuizReview(data.reviewQuestions);
+    quizReviewOpen = true;
+    if(btn) btn.textContent = '🙈 إخفاء إجاباتك';
+  } catch(e){
+    wrap.innerHTML = '<div class="msg error">⚠️ تعذر تحميل إجاباتك دلوقتي</div>';
+    if(btn) btn.textContent = '👁️ عرض إجاباتك';
+  }
+}
+
+function closeQuizModal(){
+  document.getElementById('quizPage').classList.remove('open');
+  document.body.style.overflow = '';
+  currentQuizTaskId = null;
+  currentQuizAnswers = [];
+  currentQuizQuestionsData = [];
+  quizReviewOpen = false;
+  quizSubmitInProgress = false;
+  setPageTitle('المنشورات');
+}
+
+/* ══════════ ADMIN PANEL (إدارة المهام والأسئلة) ══════════ */
+let adminTasksData = [];
+let adminQuestionsData = [];
+
+function onAdminTaskTypeChange(){
+  const type = document.getElementById('adminTaskType').value;
+  document.getElementById('adminTaskScoreColWrap').classList.toggle('is-hidden', type !== 'quiz');
+  document.getElementById('adminTaskLinkWrap').classList.toggle('is-hidden', type !== 'link');
+}
+
+async function loadAdminData(){
+  const el = document.getElementById('adminTasksList');
+  el.innerHTML = '<div class="spinner"></div>';
+  try{
+    const r = await fetch(PROXY_URL + '?type=admindata&code=' + encodeURIComponent(currentStudentCode));
+    const data = await r.json();
+    if(data.error){
+      el.innerHTML = `<div class="msg error">تعذر التحميل: ${data.error}</div>`;
+      return;
+    }
+    adminTasksData = data.tasks || [];
+    adminQuestionsData = data.questions || [];
+    renderAdminTasks();
+  } catch(e){
+    el.innerHTML = '<div class="msg error">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+  }
+}
+
+function renderAdminTasks(){
+  const el = document.getElementById('adminTasksList');
+  if(!adminTasksData.length){
+    el.innerHTML = '<div class="msg">لا توجد مهام بعد، ضيف مهمة جديدة من فوق 👆</div>';
+    return;
+  }
+  el.innerHTML = adminTasksData.map(t=>{
+    const qs = adminQuestionsData.filter(q => String(q.taskId).trim() === String(t.taskId).trim());
+    const isQuiz = t.type === 'quiz';
+    return `
+      <div class="admin-task-card">
+        <div class="admin-task-head">
+          <div>
+            <span class="admin-task-name">${t.name}</span>
+            <span class="admin-task-id">#${t.taskId}</span>
+          </div>
+          <button class="admin-btn-icon" title="حذف المهمة" onclick="deleteAdminTask(${t.row}, '${t.taskId}')">🗑️</button>
+        </div>
+        <div class="admin-task-meta">
+          النوع: ${isQuiz ? '📝 مهمة تفاعلية' : '🔗 رابط خارجي'}
+          ${isQuiz ? ' | عمود السكور: ' + (t.scoreColumn || '—') : ''}
+          ${!isQuiz && t.link ? ' | <a href="'+t.link+'" target="_blank" rel="noopener" style="color:var(--gold-soft);">الرابط</a>' : ''}
+          ${isQuiz ? ' | الحالة: ' + (t.status === 'draft' ? '<span style="color:#f5a623;">🟡 مسودة (مش ظاهرة للطلاب)</span>' : '<span style="color:#22d3ee;">🟢 منشورة</span>') : ''}
+        </div>
+
+        ${isQuiz ? (t.status === 'draft'
+          ? `<button class="admin-add-q-btn" style="background:linear-gradient(135deg,#22d3ee,#7c3aed);" onclick="publishAdminTask(${t.row}, '${t.taskId}')">🚀 نشر المهمة (بعد ما تخلص كل الأسئلة)</button>`
+          : `<button class="admin-add-q-btn" style="background:transparent;border:1px solid var(--paper-line);" onclick="unpublishAdminTask(${t.row}, '${t.taskId}')">↩️ رجّعها مسودة (لتعديل الأسئلة)</button>`
+        ) : ''}
+
+        ${isQuiz ? `
+          <div class="admin-q-list">
+            ${qs.length ? qs.map(q=>`
+              <div class="admin-q-card">
+                <div class="admin-q-text">
+                  <span>${q.question}</span>
+                  <span>
+                    <button class="admin-btn-icon" title="تعديل السؤال" onclick="toggleEditQuestionForm(${q.row})">✏️</button>
+                    <button class="admin-btn-icon" title="حذف السؤال" onclick="deleteAdminQuestion(${q.row})">✕</button>
+                  </span>
+                </div>
+                <div class="admin-q-opts">
+                  ${(q.options||[]).map((o,oi)=> o && String(o).trim() ? `${Number(q.correctOption)===oi+1?'<span class="correct">✔ ':''}${o}${Number(q.correctOption)===oi+1?'</span>':''}` : '').filter(Boolean).join(' &nbsp;|&nbsp; ')}
+                </div>
+                <div class="admin-q-points">الدرجة: ${q.points}</div>
+
+                <div class="admin-add-q-form is-hidden" id="editQForm-${q.row}">
+                  <label class="admin-label">نص السؤال</label>
+                  <textarea class="admin-input" id="editQ-question-${q.row}">${q.question || ''}</textarea>
+
+                  <label class="admin-label">الاختيار 1</label>
+                  <input type="text" class="admin-input" id="editQ-opt1-${q.row}" value="${(q.options && q.options[0]) || ''}">
+                  <label class="admin-label">الاختيار 2</label>
+                  <input type="text" class="admin-input" id="editQ-opt2-${q.row}" value="${(q.options && q.options[1]) || ''}">
+                  <label class="admin-label">الاختيار 3 (اختياري)</label>
+                  <input type="text" class="admin-input" id="editQ-opt3-${q.row}" value="${(q.options && q.options[2]) || ''}">
+                  <label class="admin-label">الاختيار 4 (اختياري)</label>
+                  <input type="text" class="admin-input" id="editQ-opt4-${q.row}" value="${(q.options && q.options[3]) || ''}">
+
+                  <label class="admin-label">الاختيار الصح</label>
+                  <div class="admin-correct-choices" id="editQ-correct-${q.row}">
+                    ${[1,2,3,4].map(n=>`<div class="admin-correct-choice ${Number(q.correctOption)===n?'selected':''}" id="editQ-correct-${q.row}-${n}" onclick="selectAdminEditCorrectOption(${q.row},${n})">${n}</div>`).join('')}
+                  </div>
+
+                  <label class="admin-label">الدرجة</label>
+                  <input type="text" class="admin-input" id="editQ-points-${q.row}" inputmode="numeric" value="${q.points != null ? q.points : ''}">
+
+                  <button class="quiz-submit-btn" style="margin-top:12px;" onclick="submitAdminEditQuestion(${q.row})">حفظ التعديل</button>
+                  <div id="editQ-status-${q.row}"></div>
+                </div>
+              </div>
+            `).join('') : '<div class="msg" style="padding:8px;">لسه مفيش أسئلة للمهمة دي</div>'}
+          </div>
+
+          <button class="admin-add-q-btn" onclick="toggleAdminAddQuestionForm('${t.taskId}')">➕ إضافة سؤال جديد</button>
+          <div class="admin-add-q-form is-hidden" id="addQForm-${t.taskId}">
+            <label class="admin-label">نص السؤال</label>
+            <textarea class="admin-input" id="addQ-question-${t.taskId}" placeholder="اكتب السؤال هنا"></textarea>
+
+            <label class="admin-label">الاختيار 1</label>
+            <input type="text" class="admin-input" id="addQ-opt1-${t.taskId}">
+            <label class="admin-label">الاختيار 2</label>
+            <input type="text" class="admin-input" id="addQ-opt2-${t.taskId}">
+            <label class="admin-label">الاختيار 3 (اختياري)</label>
+            <input type="text" class="admin-input" id="addQ-opt3-${t.taskId}">
+            <label class="admin-label">الاختيار 4 (اختياري)</label>
+            <input type="text" class="admin-input" id="addQ-opt4-${t.taskId}">
+
+            <label class="admin-label">الاختيار الصح</label>
+            <div class="admin-correct-choices" id="addQ-correct-${t.taskId}">
+              ${[1,2,3,4].map(n=>`<div class="admin-correct-choice" id="addQ-correct-${t.taskId}-${n}" onclick="selectAdminCorrectOption('${t.taskId}',${n})">${n}</div>`).join('')}
+            </div>
+
+            <label class="admin-label">الدرجة</label>
+            <input type="text" class="admin-input" id="addQ-points-${t.taskId}" inputmode="numeric" placeholder="مثال: 10">
+
+            <button class="quiz-submit-btn" style="margin-top:12px;" onclick="submitAdminAddQuestion('${t.taskId}')">إضافة السؤال</button>
+            <div id="addQ-status-${t.taskId}"></div>
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }).join('');
+}
+
+function toggleAdminAddQuestionForm(taskId){
+  const form = document.getElementById(`addQForm-${taskId}`);
+  form.classList.toggle('is-hidden');
+}
+
+let adminSelectedCorrect = {};
+function selectAdminCorrectOption(taskId, n){
+  adminSelectedCorrect[taskId] = n;
+  [1,2,3,4].forEach(i=>{
+    document.getElementById(`addQ-correct-${taskId}-${i}`).classList.toggle('selected', i===n);
+  });
+}
+
+async function submitAdminAddTask(){
+  const status = document.getElementById('adminTaskStatus');
+  const name = document.getElementById('adminTaskName').value.trim();
+  const type = document.getElementById('adminTaskType').value;
+  const taskId = document.getElementById('adminTaskId').value.trim();
+  const scoreColumn = document.getElementById('adminTaskScoreColumn').value.trim();
+  const link = document.getElementById('adminTaskLink').value.trim();
+
+  if(!name || !taskId){
+    status.innerHTML = '<div class="msg error admin-msg">اكتب اسم المهمة وكود المهمة (TaskID) الأول</div>';
+    return;
+  }
+  if(type === 'quiz' && !scoreColumn){
+    status.innerHTML = '<div class="msg error admin-msg">لازم تحدد عمود السكور للمهمة التفاعلية</div>';
+    return;
+  }
+  status.innerHTML = '<div class="spinner"></div>';
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        action: 'addTask', code: currentStudentCode,
+        name, taskId, type, scoreColumn, link
+      })
+    });
+    const res = await r.json();
+    if(res.success){
+      status.innerHTML = '<div class="msg admin-msg">✅ تمت إضافة المهمة</div>';
+      document.getElementById('adminTaskName').value = '';
+      document.getElementById('adminTaskId').value = '';
+      document.getElementById('adminTaskScoreColumn').value = '';
+      document.getElementById('adminTaskLink').value = '';
+      loadAdminData();
+      loadTasks();
+    } else {
+      status.innerHTML = `<div class="msg error admin-msg">⚠️ ${res.error || 'حصل خطأ'}</div>`;
+    }
+  } catch(e){
+    status.innerHTML = '<div class="msg error admin-msg">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+  }
+}
+
+async function publishAdminTask(row, taskId){
+  if(!confirm(`متأكد إنك خلصت كل أسئلة المهمة "${taskId}" وعايز تنشرها دلوقتي؟ بعد النشر هتظهر للطلاب فورًا.`)) return;
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({ action: 'publishTask', code: currentStudentCode, row })
+    });
+    const res = await r.json();
+    if(res.success){ loadAdminData(); loadTasks(); }
+    else alert(res.error || 'حصل خطأ');
+  } catch(e){
+    alert('في مشكلة في الاتصال، حاول بعد شوية');
+  }
+}
+
+async function unpublishAdminTask(row, taskId){
+  if(!confirm(`تأكيد رجوع المهمة "${taskId}" لمسودة؟ هتختفي من قائمة الطلاب لحد ما تنشرها تاني.`)) return;
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({ action: 'unpublishTask', code: currentStudentCode, row })
+    });
+    const res = await r.json();
+    if(res.success){ loadAdminData(); loadTasks(); }
+    else alert(res.error || 'حصل خطأ');
+  } catch(e){
+    alert('في مشكلة في الاتصال، حاول بعد شوية');
+  }
+}
+
+async function deleteAdminTask(row, taskId){
+  if(!confirm(`متأكد إنك عايز تمسح مهمة "${taskId}"؟ (الأسئلة بتاعتها هتفضل موجودة في شيت Questions)`)) return;
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({ action: 'deleteTask', code: currentStudentCode, row })
+    });
+    const res = await r.json();
+    if(res.success){ loadAdminData(); loadTasks(); }
+    else alert(res.error || 'حصل خطأ');
+  } catch(e){
+    alert('في مشكلة في الاتصال، حاول بعد شوية');
+  }
+}
+
+async function submitAdminAddQuestion(taskId){
+  const status = document.getElementById(`addQ-status-${taskId}`);
+  const question = document.getElementById(`addQ-question-${taskId}`).value.trim();
+  const option1 = document.getElementById(`addQ-opt1-${taskId}`).value.trim();
+  const option2 = document.getElementById(`addQ-opt2-${taskId}`).value.trim();
+  const option3 = document.getElementById(`addQ-opt3-${taskId}`).value.trim();
+  const option4 = document.getElementById(`addQ-opt4-${taskId}`).value.trim();
+  const points = document.getElementById(`addQ-points-${taskId}`).value.trim();
+  const correctOption = adminSelectedCorrect[taskId];
+
+  if(!question || !option1 || !option2){
+    status.innerHTML = '<div class="msg error admin-msg">اكتب نص السؤال واختيارين على الأقل</div>';
+    return;
+  }
+  if(!correctOption){
+    status.innerHTML = '<div class="msg error admin-msg">حدد الاختيار الصح 👆</div>';
+    return;
+  }
+  status.innerHTML = '<div class="spinner"></div>';
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        action: 'addQuestion', code: currentStudentCode,
+        taskId, question, option1, option2, option3, option4,
+        correctOption, points
+      })
+    });
+    const res = await r.json();
+    if(res.success){
+      delete adminSelectedCorrect[taskId];
+      loadAdminData();
+    } else {
+      status.innerHTML = `<div class="msg error admin-msg">⚠️ ${res.error || 'حصل خطأ'}</div>`;
+    }
+  } catch(e){
+    status.innerHTML = '<div class="msg error admin-msg">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+  }
+}
+
+// ✅ جديد: تعديل سؤال موجود - بيحافظ على مكانه في الشيت وبيعيد تصحيح
+// أي طالب سبق سلّم المهمة دي تلقائي (درجته هتتحدث في شيت SCORE كمان)
+let adminEditSelectedCorrect = {};
+
+function toggleEditQuestionForm(row){
+  const form = document.getElementById(`editQForm-${row}`);
+  if(!form) return;
+  // أول ما نفتح الفورم، نتأكد إن الاختيار الصح الحالي متعلّم صح
+  if(adminEditSelectedCorrect[row] === undefined){
+    const q = adminQuestionsData.find(q => q.row === row);
+    if(q) adminEditSelectedCorrect[row] = Number(q.correctOption);
+  }
+  form.classList.toggle('is-hidden');
+}
+
+function selectAdminEditCorrectOption(row, n){
+  adminEditSelectedCorrect[row] = n;
+  [1,2,3,4].forEach(i=>{
+    const el = document.getElementById(`editQ-correct-${row}-${i}`);
+    if(el) el.classList.toggle('selected', i===n);
+  });
+}
+
+async function submitAdminEditQuestion(row){
+  const status = document.getElementById(`editQ-status-${row}`);
+  const question = document.getElementById(`editQ-question-${row}`).value.trim();
+  const option1 = document.getElementById(`editQ-opt1-${row}`).value.trim();
+  const option2 = document.getElementById(`editQ-opt2-${row}`).value.trim();
+  const option3 = document.getElementById(`editQ-opt3-${row}`).value.trim();
+  const option4 = document.getElementById(`editQ-opt4-${row}`).value.trim();
+  const points = document.getElementById(`editQ-points-${row}`).value.trim();
+  const correctOption = adminEditSelectedCorrect[row];
+
+  if(!question || !option1 || !option2){
+    status.innerHTML = '<div class="msg error admin-msg">اكتب نص السؤال واختيارين على الأقل</div>';
+    return;
+  }
+  if(!correctOption){
+    status.innerHTML = '<div class="msg error admin-msg">حدد الاختيار الصح 👆</div>';
+    return;
+  }
+  status.innerHTML = '<div class="spinner"></div>';
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({
+        action: 'editQuestion', code: currentStudentCode,
+        row, question, option1, option2, option3, option4,
+        correctOption, points
+      })
+    });
+    const res = await r.json();
+    if(res.success){
+      delete adminEditSelectedCorrect[row];
+      loadAdminData();
+      if(res.regraded){
+        alert(`تم حفظ التعديل، وتم تحديث درجات ${res.regraded} طالب/طالبة سبق حلّوا المهمة دي تلقائيًا.`);
+      }
+    } else {
+      status.innerHTML = `<div class="msg error admin-msg">⚠️ ${res.error || 'حصل خطأ'}</div>`;
+    }
+  } catch(e){
+    status.innerHTML = '<div class="msg error admin-msg">⚠️ في مشكلة في الاتصال، حاول بعد شوية</div>';
+  }
+}
+
+async function deleteAdminQuestion(row){
+  if(!confirm('متأكد إنك عايز تمسح السؤال ده؟')) return;
+  try{
+    const r = await fetch(PROXY_URL, {
+      method: 'POST',
+      body: JSON.stringify({ action: 'deleteQuestion', code: currentStudentCode, row })
+    });
+    const res = await r.json();
+    if(res.success){ loadAdminData(); }
+    else alert(res.error || 'حصل خطأ');
+  } catch(e){
+    alert('في مشكلة في الاتصال، حاول بعد شوية');
+  }
+}
+
+loadTop10();
+loadGroups();
+loadTasks();
+prefillSavedCode();
+
+/* -- إظهار الفوتر بس لو المستخدم نزل لآخر الصفحة -- */
+function checkFooterVisibility(){
+  const footerEl = document.querySelector('footer');
+  if(!footerEl) return;
+  const scrolledToBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 4);
+  footerEl.classList.toggle('at-bottom', scrolledToBottom);
+}
+window.addEventListener('scroll', checkFooterVisibility, { passive: true });
+window.addEventListener('resize', checkFooterVisibility);
+checkFooterVisibility();
+</script>
+</body>
+</html>
