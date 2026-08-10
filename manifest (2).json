@@ -1,0 +1,31 @@
+{
+  "name": "مهرجان الكرازة - ليأتِ ملكوتك",
+  "short_name": "ليأتِ ملكوتك",
+  "description": "اعرف نتيجتك ودرجاتك، تابع ترتيبك وترتيب مجموعتك، وشارك في المهام والأسئلة التفاعلية أول بأول.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#071426",
+  "theme_color": "#071426",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "appicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "appicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "appicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
